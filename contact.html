@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+    <link rel="stylesheet" href="path/to/tailwind.css">
+    <link rel="stylesheet" href="src/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Work Sans', sans-serif;
+        }
+          /* Ajoutez ici les styles essentiels pour le rendu initial */
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RevUp App</title>
+</head>
+<body>
+    <header>
+        <div class="h-14 bg-[#E30613] flex mx-auto justify-center items-center gap-8 sm:gap-4">
+          <div class="flex items-center justify-center gap-2">
+            <!-- <img src="images/telicon.jpg" alt="phone icon"> -->
+            <i class="fa-solid fa-phone"></i>
+            <p class="text-white font-bold text-sm">+229 01644343</p>
+          </div>
+<!--       
+         <div class="">
+          <p class="text-white font-bold text-sm">+254 (0)716214083</p>
+         </div> -->
+        </div>
+        <div class="sm:py-4 flex items-center justify-center sm:justify-center sm:gap-[58px]">
+          <a href="/"><img src="images/revuplogo.jpg" alt="logo revup" class="hidden sm:block"/></a>
+          <nav class="">
+            <ul class="flex flex-row items-center justify-center gap-[20px] sm:gap-[25px]">
+              <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block">Fonctionnalités</a></li>
+              <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block">Comment ca marche</a></li>
+              <li><a href="about.html" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">A propos</a></li>
+              <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">Actualités</a></li>
+              <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">Contact</a></li>
+            </ul>
+          </nav>
+          <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer hidden sm:flex">
+            <p class="font-mono font-bold text-base">Télécharger</p>
+            <img src="images/icondown.png" alt="download icon" class="">
+          </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="h-[261px] bg-[#34C759] rounded-b-[50px] flex items-center justify-center gap-2">
+            <p class="font-serif font-bold text-[64px] leading-6">Contact</p>
+            <!-- <img src="images/aproicon.jpg" alt="arrow">  -->
+        </section>
+
+        <!-- Formulaire d'inscription -->
+         <section class="flex flex-col items-center justify-center pt-[140px] sm:pt-[237px] pb-[60px] sm:pb-[89px] gap-[141px]">
+
+            <div class="flex sm:flex-row flex-col items-center justify-center gap-[55px]">
+                <form action="" class="flex flex-col gap-[18px] sm:gap-[31px] items-center sm:justify-start sm:items-start w-full">
+                    <div class="flex gap-[18px] w-full sm:w-[651px] sm:gap-[36px] items-center sm:items-start justify-center sm:flex-row flex-col">
+                        <input type="text" placeholder="Entrez votre nom" id="nom" class="border-none px-4 rounded-full sm:flex-1 h-[60px] bg-[#008E241C] placeholder:text-[#008E24] placeholder:font-normal placeholder:text-xs placeholder:font-mono outline-none">
+                        <input type="text" placeholder="Entrez votre nom" id="prenom" class="border-none px-4 rounded-full sm:flex-1 h-[60px] bg-[#008E241C] placeholder:text-[#008E24] placeholder:font-normal placeholder:text-xs placeholder:font-mono outline-none">
+                    </div>
+                    <input type="text" placeholder="Entrez votre nom" class="border-none px-4 rounded-full w-5/6 sm:w-[651px] h-[60px] bg-[#008E241C] placeholder:text-[#008E24] placeholder:font-normal placeholder:text-xs placeholder:font-mono outline-none">
+    
+                    <textarea name="commentaire" id="commentaire" placeholder="Entrez votre nom" class="border-none p-4 rounded-xl w-5/6 sm:w-[651px] h-[179px] bg-[#008E241C] placeholder:text-[#008E24] placeholder:font-normal placeholder:text-xs placeholder:font-mono outline-none"></textarea>
+    
+                    <button class="flex items-center justify-center bg-[#34C759] w-[223px] h-[66px] rounded-full cursor-pointer mt-[18px] sm:mt-[20px]">
+                        <p class="font-mono font-bold text-base text-white">Envoyer</p>
+                    </button>
+                </form>
+                <div class="bg-[url(images/bgcontact.png)] bg-cover bg-no-repeat w-5/6 sm:w-[460px] h-[360px] sm:h-[461px] flex flex-col items-center justify-center gap-[36px] sm:gap-[32px]">
+                    <h2 class="font-serif font-bold text-[32px] text-[#262626]">Inscrivez-vous </h2>
+                    <p class="font-mono font-normal sm:text-base text-xs text-center text-[#262626]"> Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer </p>
+                    <div class="flex flex-col gap-4 justify-center items-center sm:p-2">
+                        <div class="flex items-center w-5/6 sm:w-[353px] gap-4 rounded-full bg-white px-6 py-2">
+                            <img src="images/enveloppicon.png" alt="">
+                            <input type="text" placeholder="Entrez votre email" class="placeholder:text-[#6C6565] placeholder:font-medium placeholder:text-base placeholder:font-mono border-none outline-none">
+                        </div>
+                        <button class="rounded-full bg-[#0A934E] text-white w-5/6 sm:w-[353px] h-[55px] cursor-pointer">Abonnez-vous</button>
+                    </div>
+                </div>
+            </div>
+
+             <!-- Recherchez une salle sur maps -->
+            <div class="bg-[url(images/maps.png)] bg-cover bg-no-repeat w-5/6 sm:w-[1175px] h-[389px] flex items-center px-8">
+                <div class="bg-white rounded-lg w-full sm:w-[471px] sm:h-[286px] h-[255px] flex flex-col gap-[40px] items-center justify-center">
+                    <h2 class="font-serif font-bold text-xl sm:text-[32px] text-[#262626]">Rechercher une salle </h2>
+                    <div class="flex flex-col sm:gap-4 gap-2 items-center">
+                        <div class="flex items-center gap-6 w-5/6 rounded-full bg-white px-4 py-2 border border-gray-200">
+                            <img src="images/search.png" alt="search icon">
+                            <input type="text" placeholder="rechercher......" class="placeholder:text-[#6C6565] placeholder:font-medium placeholder:text-xs sm:placeholder:text-base placeholder:font-mono border-none outline-none">
+                        </div>
+                        <button class="rounded-full bg-[#0A934E] text-xs sm:text-base text-white w-5/6 sm:w-[353px] h-[55px] cursor-pointer">Trouver une salle de gym</button>
+                    </div>
+                </div>
+            </div>
+
+         </section>
+
+
+         <!-- deux grandes secttions ici -->
+        <div class="bg-[#000000]">
+            <!-- Section de questions frequentes -->
+            <section class="bg-[#F5F5F5] rounded-b-[90px] flex flex-col items-center mx-auto w-full justify-center px-4 py-[60px] sm:pt-[162px] sm:pb-[127px] sm:gap-[71px] gap-[50px]">
+                <!-- <div class="flex flex-col gap-4">
+                <img src="images/Mockup.png" alt="mockup de l'app" class="">
+                <div class="flex items-center justify-center gap-2">
+                    <img src="images/playstore.png" alt="playstore image" class="sm:w-[235px] w-[150px]">
+                    <img src="images/appstore.png" alt="app store image" class="sm:w-[235px] w-[150px]">
+                </div>
+                </div>
+                <div class="flex flex-col justify-start items-start gap-[36px]">
+                <div class="flex flex-col sm:gap-1">
+                    <p class="font-seif font-bold text-[30px] sm:text-[40px] sm:leading-6">Devenez Fondateur</p>
+                    <p class="font-mono font-semibold text-white text-[12px] w-[243px] leading-6 bg-[#E30613]">Accès privilégié et avantages exclusifs !</p>
+                </div>
+                <p class="font-serif font-normal text-base text-[#2C2C2D] sm:leading-6">The US Overseas Cooperative Development Council is an alliance of </p>
+                <ul class="style-none flex flex-col gap-[12px] sm:gap-[16px]">
+                    <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon">
+                    Accès anticipé à l'application (avant juillet)
+                    </li>
+                    
+                    <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon">
+                    Entrée dans le groupe privé des fondateurs (WhatsApp VIP)
+                    </li>
+    
+                    <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon">
+                    Badge fondateur sur l’appli
+                    </li>
+    
+                    <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon">
+                    Réductions à vie sur les options premium
+                    </li>
+    
+                    <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon">
+                    Cadeaux exclusifs à la sortie
+                    </li>
+                </ul>
+    
+                <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[287px] h-[70px] rounded-full cursor-pointer">
+                    <p class="font-mono font-bold text-base text-white">Devenez Fondateur</p>
+                    <img src="images/ei_arrow-right.png" alt="">
+                </button>
+                </div> -->
+                <h1 class="text-center font-serif font-bold text-xl sm:text-[48px]">Questions fréquemment posées</h1>
+                <div class="rounded-lg border border-gray-300 py-8 sm:px-4 px-2 flex flex-col gap-4">
+
+                    <div class="border border-[#0A934E] rounded-lg w-full sm:w-[1106px] flex justify-between items-center px-4 sm:px-8 py-2 sm:py-4">
+                        <p class="text-xs sm:text-base">, when an unknown printer took a galley of type and scrambled it</p>
+                        <img src="images/plusicon.png" alt="plus icon" class="toggle-response w-5 h-5" data-response="Réponse à la question 1">
+                    </div>
+
+                    <div class="border border-[#0A934E] rounded-lg w-full sm:w-[1106px] flex justify-between items-center px-4 sm:px-8 py-2 sm:py-4">
+                      <p class="text-xs sm:text-base">, when an unknown printer took a galley of type and scrambled it</p>
+                      <img src="images/plusicon.png" alt="plus icon" class="toggle-response w-5 h-5" data-response="Réponse à la question 2">
+                    </div>
+
+                    <div class="border border-[#0A934E] rounded-lg w-full sm:w-[1106px] flex justify-between items-center px-4 sm:px-8 py-2 sm:py-4">
+                      <p class="text-xs sm:text-base">, when an unknown printer took a galley of type and scrambled it</p>
+                      <img src="images/plusicon.png" alt="plus icon" class="toggle-response w-5 h-5" data-response="Réponse à la question 3">
+                    </div>
+
+                    <div class="border border-[#0A934E] rounded-lg w-full sm:w-[1106px] flex justify-between items-center px-4 sm:px-8 py-2 sm:py-4">
+                      <p class="text-xs sm:text-base">, when an unknown printer took a galley of type and scrambled it</p>
+                      <img src="images/plusicon.png" alt="plus icon" class="toggle-response w-5 h-5" data-response="Réponse à la question 4">
+                    </div>
+
+                </div>
+            </section>
+           
+           <footer class="z-5 flex flex-col gap-[50px] sm:gap-[83px] items-center justify-center pt-[100px] pb-8 px-4">
+             <div class="flex sm:flex-row flex-col justify-center gap-[30px] sm:gap-[130px]">
+                 <div class="">
+                   <img src="images/revupfooter.png" alt="logo revup">
+                   <p class="font-mono font-medium text-base leading-6 text-white w-[330px]">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                 </div>
+ 
+                 <div class="flex sm:flex-row flex-col gap-[45px] sm:gap-[97px]">
+                   <div class="flex flex-col gap-[16px] sm:gap-[38px]">
+                     <h2 class="text-[white] font-mono font-bold text-[20px]">Navigation</h2>
+                     <ul class="style-none flex flex-col gap-[17px]">
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">A propos</li>
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">FAQ</li>
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Contact</li>
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Condition Général</li>
+                     </ul>
+                   </div>
+ 
+                   <div class="flex flex-col gap-[16px] sm:gap-[38px]">
+                     <h2 class="text-[white] font-mono font-bold text-[20px]">Liens utiles</h2>
+                     <ul class="style-none flex flex-col gap-[17px]">
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Fonctionnalités</li>
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Actualités</li>
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Espace Media</li>
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Expert géomètres</li>
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Quincailleries</li>
+                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Constructeurs</li>
+                     </ul>
+                   </div>
+ 
+                   <div class="flex flex-col gap-[30px]">
+                     <h2 class="text-[white] font-mono font-bold text-[20px]">Téléchargez l’application</h2>
+                     <p class="text-[#FFFFFFB2] font-mono font-medium text-sm w-[320px] leading-6">Obtenez gratuitement l’application sur votre mobile et profitez-en.</p>
+                     <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer">
+                       <p class="font-mono font-bold text-base">Télécharger</p>
+                       <img src="images/icondown.png" alt="download icon" class="">
+                     </button>
+                   </div>
+                 </div>
+             </div>
+ 
+             <div class="flex sm:flex-row flex-col flex-col-reverse gap-[20px] sm:gap-[109px] items-center justify-center">
+               <p class="font-mono font-normal text-[12px] sm:text-base sm:leading-6 text-[#A19999] hover:text-[#34C759]">© 2025 Revup Apk. Tous les droits sont réservés</p>
+               <div class="flex gap-4">
+                 <img src="images/youtube.png" alt="facebook icon">
+                 <img src="images/face.png" alt="twitter icon">
+                 <img src="images/insta.png" alt="instagram icon">
+                 <img src="images/linkedin.png" alt="linkedin icon">
+               </div>
+               <p class="font-mono font-normal text-base leading-6 text-[#A19999] hover:text-[#34C759]">Condition générales</p>
+             </div>
+           </footer>
+        </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
