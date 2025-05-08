@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+    <!-- <link rel="stylesheet" href="path/to/tailwind.css"> -->
+    <!-- <style>
+      body {
+        margin: 0;
+        font-family: 'Work Sans', sans-serif;
+      }
+    </style> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RevUp App</title>
+    <script type="module" crossorigin src="/assets/index-DNMEA2Dk.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-D8PUd_Pf.css">
+  </head>
+  <body>
+    <!-- <div id="app">
+    </div> -->
+    <header>
+      <div class="h-14 bg-[#E30613] flex flex-col mx-auto justify-center items-center gap-10 sm:gap-4">
+        <div class="flex items-center justify-center gap-2">
+          <!-- <img src="images/telicon.jpg" alt="phone icon"> -->
+          <i class="fa-solid fa-phone"></i>
+          <p class="text-white font-bold text-sm">+229 01644343</p>
+        </div>
+        
+        <!-- <div class="scrolling-text flex items-center justify-center">
+          <p class="text-white font-medium text-sm">Bienvenue sur RevUp - Transformez vos entraînements en récompenses !</p>
+        </div> -->
+      </div>
+      <div class="py-4 flex items-center justify-center sm:justify-center sm:gap-[58px]">
+        <a href="/"><img src="/assets/revuplogo-PZv55Y5I.jpg" alt="logo revup" class="hidden sm:block"/></a>
+        <nav class="">
+          <ul class="flex flex-row items-center justify-center gap-[20px] sm:gap-[25px]">
+            <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block">Fonctionnalités</a></li>
+            <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block">Comment ca marche</a></li>
+            <li><a href="about.html" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">A propos</a></li>
+            <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">Actualités</a></li>
+            <li><a href="contact.html" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer hidden sm:flex">
+          <p class="font-mono font-bold text-base">Télécharger</p>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACDSURBVHgB7ZTBCYAwDEXTuogjOIqb6AatGziGVydwBNfw5gg1lYJFtLSSgIc8eIQkkH8LgEBMh/bAyBLMRgMzEiABJ83HXVaAP7Ci5mFnwi4ZUkGaDVWoDX0dVT8b0AkIsKhD91AdXKFkWM7jcQjrs/sf6mXu/34LZczoeB/qwmCBngOCuhP9YzrjPgAAAABJRU5ErkJggg==" alt="download icon" class="">
+        </button>
+      </div>
+    </header>
+    <!-- <div class="h-screen flex">
+      <h1 class="text-red-500 font-bold text-2xl">Mon champion</h1>
+    </div> -->
+    <main class="z-10">
+        <div class="bg-[#F2791814]">
+          <section class="bg-[#34C759] sm:h-[758px] rounded-b-[60px] p-12 flex items-center justify-center sm:gap-2">
+            <div class="relative bg-transparent hidden sm:block sm:flex-1">
+              <img src="/assets/handsome-black-man-is-engaged-gym%201-C1lrIgjh.png" alt="image hero section" class="z-0">
+            </div>
+            <div class="py-[70px] sm:pt-[93px] sm:pl-[80px] sm:flex-1 w-full">
+              <div class="relative">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAABACAYAAABVy1Q8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMNSURBVHgB3ZqNcdswDIXhLtBuUI2QEThCOkHUCdoN6k4QdwJnA3cDZwN3A10ncDd4JSP6KisEqAgEG+a70yXnH4IQwEeAFtErAcBNuOgt4B35gpHBXx+oVcLk/XXENXtqET9xFyOS4iu1hp/0LXjO/uqoNfykd4JTJ2qNuIYGwal7ao2QWjHFOBzVIN7d+xJ3MYiA4NAAaymPd/U0MXpHSvBcvqfYSXmYfCJF1KqE/HpS37SUUUlq1aqEcW/iKC/lqKBKkKX8SKXBWESaqdKCm1a+ioCsSiXW043l+JzRg2BUnRp+jK3l+CmDudT4RkogS7lJ6kmqFHCkAHIVYZZ6prt8ZvzyqReNHgWjB1KSGd9RaZAvMFX5Dln1BljUejDe5SGr3pYsgGHDBllVz1ZRCkZPglOq0ghyFticQ8C4YQMvEDaKF42aSXkmSnaNIOTSSNWwgc8AR1YgXxrd0kr8dx+YMft3ZMRms/nj/3wWPrKHQeli5lDAO/Xo//xg3g75vjb13tP/AgYNG/itwVENULBhw7gtcCweRw0KNWwYD2pSKlf/6BhyFbE49WKUhtn3++kHHFUA+dRbvDFGpy573XCVbvHOhQH3wVMY7riQU+/FtV4cbzt/MYW6MRMmIaWeIy3cyGQE5HpMX2TWdija3JlFCXyx95GMwLjhcnZ3tJJL6fOLeV+qxVTEWo8ri+6gESbwymPT2v6zK0XJ0QouEXpk3g/OmP3OGaPEZcfq9uIJyGdfZk6B725/kgbkj3XDrtxRYcBXDwNpgSylT0ZKO4VxHSWhEkDexQNhERc9MrJ2KHe2diH8pK9WQFhHaGLksMCpAfojXm7trupvkmcKQU799cn/+51kOn8FpzQ/bnXM67/JAoyyel4QrePaaGHsbR5m49k9YoZ0h8ilYE8rwfUTKh1ZgnFd5WT9wl4zIdQ6vYnGeiyPlq58qQWeP7wkUUTeqwD5fGAeLUctgOWC0U608DLBGFqKlsNCwaBWQHqTnNNTa4CX9zafnA8kohUc7Kh1JtHq6a2ASnL9F9vDBN1URN9tAAAAAElFTkSuQmCC" alt="absoute top image" class="absolute -left-11 -top-8 z-0">
+                <img src="/assets/heroecrit-CvFkFoe4.png" alt="hero text" class="relative">
+              </div>
+              <p class="font-mono font-normal sm:text-2xl text-xl leading-8 sm:leading-9 sm:tracking-wide my-[28px]">
+                L'application <span class="font-bold">africaine</span> qui transforme chaque entraînement en récompense. Rejoignez le mouvement. en cliquant sur le bouton ci-dessous
+              </p>
+              <button class="bg-white border border-black font-mono font-medium w-[235px] h-[70px] text-[#009626] text-lg py-2 px-4 rounded-full mt-4 cursor-pointer">
+                Je suis intérêssé.e
+              </button>
+            </div>
+          </section>
+  
+          <section class="pt-[154px] w-full">
+            <div class="flex flex-col justify-center items-center mx-auto sm:gap-4 gap-6">
+              <p class="text-center font-mono font-extrabold sm:text-6xl text-4xl flex flex-col">
+                <span>Pourquoi</span>
+                <span><span class="text-[#E30613]">Revup </span> ?</span>
+              </p>
+              <p class="font-mono font-normal text-xs sm:text-base text-center tracking-wide sm:leading-6 w-full sm:w-[709px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt porttitor arcu ipsum scelerisque interdum nibh neque, proin. Morbi tempor amet urna, </p>
+            </div>
+  
+            <div class="my-[200px] flex sm:flex-row flex-col items-center justify-center sm:gap-[30px] gap-[80px]">
+  
+              <!-- ceci constitue premier element -->
+              <div class="relative">
+                <!-- creer le cercle d'image ici -->
+                 <div class="flex items-center justify-center absolute -top-18 left-17 sm:left-24 z-10">
+                    <img src="/assets/bagicon-DQzmCUKz.png" alt="">
+                 </div>
+                <!-- gerer la rectangle d'abord -->
+                <div class="bg-white sm:h-[417px] h-[280px] w-[310px] sm:w-[380px] rounded-[32px] flex flex-col gap-[20px] sm:gap-[36px] items-center justify-center sm:pt-[160px] pt-[120px] px-4 relative">
+                  <p class="font-bold font-serif text-xl sm:text-4xl text-center w-[220px]">Motivation garantie</p>
+                  <p class="font-serif sm:text-2xl text-xl font-light text-center">Recevez des points après chaque séance.</p>
+                </div>
+              </div>
+  
+              <!-- ceci constitue deuxieme element -->
+              <div class="relative">
+                <!-- creer le cercle d'image ici -->
+                 <div class="flex items-center justify-center absolute -top-18 left-17 sm:left-24 z-10">
+                    <img src="/assets/recomp-CsmH37H6.png" alt="image ou icone recompense">
+                 </div>
+
+                <!-- gerer la rectangle d'abord -->
+                <div class="bg-white sm:h-[417px] h-[280px] w-[310px] sm:w-[380px] rounded-[32px] flex flex-col gap-[20px] sm:gap-[36px] items-center justify-center sm:pt-[160px] pt-[120px] px-4 relative">
+                  <p class="font-bold font-serif text-xl sm:text-4xl text-center">Récompenses réelles</p>
+                  <p class="font-serif sm:text-2xl text-xl font-light text-center">Convertissez vos efforts en cadeaux ou argent.</p>
+                </div>
+              </div>
+  
+              <!-- ceci constitue troisieme element -->
+              <div class="relative">
+                <!-- creer le cercle d'image ici -->
+                 <div class="flex items-center justify-center absolute -top-18 left-17 sm:left-24 z-10">
+                    <img src="/assets/objectif-B6sCd0-x.png" alt="recompense icon">
+                 </div>
+                
+                 <!-- gerer la rectangle d'abord -->
+                <!-- <div class="bg-white sm:h-[417px] h-[280px] w-[310px] sm:w-[380px] rounded-[32px] flex flex-col gap-[36px] items-center pt-[180px] relative">
+                  <p class="font-bold font-serif text-4xl text-center w-[220px]">100% africain</p>
+                  <p class="font-serif text-2xl font-light text-center w-[327px]">Une application conçue par des passionnés du continent, pour le continent.</p>
+                </div> -->
+
+                <div class="bg-white sm:h-[417px] h-[280px] w-[310px] sm:w-[380px] rounded-[32px] flex flex-col gap-[20px] sm:gap-[36px] items-center justify-center sm:pt-[160px] pt-[120px] px-4 relative">
+                  <p class="font-bold font-serif text-xl sm:text-4xl text-center">100% africain</p>
+                  <p class="font-serif sm:text-2xl text-xl font-light text-center">Une application conçue par des passionnés du continent, pour le continent.</p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="w-full bg-[url(images/rectanglebg.jpg)] bg-cover bg-no-repeat h-[970px] mb-10 py-[97px]">
+                <p class="flex flex-col items-center mx-auto sm:gap-2 sm:gap-10 mb-[64px]">
+                  <span class="font-serif font-bold text-[35px] sm:text-[65px] sm:tracking-wide sm:leading-6 text-center">Comment ça marche</span> 
+                  <span class="font-serif font-bold text-[35px] sm:text-[65px] sm:tracking-wide sm:leading-6 text-center"><span class="text-[#E30613]">Revup</span> ? </span>
+                </p>
+  
+                <div class="sm:pl-[107px]">
+                  <!-- Indiquez les differents etapes a suivre pour obtenir un app -->
+                   <div class="flex gap-2">
+                    <img src="data:image/png;base64,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" alt="step icone" class="sm:block hidden">
+                    <div class="flex flex-col gap-[60px] pl-2 sm:pl-0">
+                      <div class="flex flex-col items-start gap-2">
+                        <h3 class="font-mono font-bold text-base">Créer un compte  Revup</h3>
+                        <p class="font-mono font-normal text-sm text-[#2F3631]">Après avoir télécharger notre 
+                          application procéder à la 
+                          création de votre compte</p>
+                      </div>
+  
+                      <div class="flex flex-col items-start gap-2">
+                        <h3 class="font-mono font-bold text-base">Choissez une formule 
+                          d’abonnement</h3>
+                        <p class="font-mono font-normal text-sm text-[#2F3631]">Ici vous nous présenté votre business, ou projet
+                          et de notre côté nous vous proposons des 
+                          solutions et des méthodes </p>
+                      </div>
+  
+                      <div class="flex flex-col items-start gap-2">
+                        <h3 class="font-mono font-bold text-base">Consultez la liste des exercices 
+                          du jour et faites un choix</h3>
+                        <p class="font-mono font-normal text-sm text-[#2F3631]">Faites vos demandes de stage chez nous pour 
+                          acquérir des compétences, et l’esprit de travail
+                          en équipee</p>
+                      </div>
+  
+                      <div class="flex flex-col items-start gap-2">
+                        <h3 class="font-mono font-bold text-base">Terminé les exo et gagnés les gains
+                          pour acheter dans la boutique</h3>
+                        <p class="font-mono font-normal text-sm text-[#2F3631]">Faites vos demandes de stage chez nous pour 
+                          acquérir des compétences, et l’esprit de travail
+                          en équipe</p>
+                      </div>
+                    </div>
+                   </div>
+                  
+                  
+                  <!-- sections des screens chot de l'app -->
+                   <!-- <div class="">
+                    <img src="images/Accueil1.jpg" alt="accueil1">
+                   </div> -->
+                </div>
+            </div>
+          </section>
+        </div>
+
+
+        <section class="py-[142px] flex flex-col items-center justify-center gap-[68px]">
+          <p class="flex flex-col text-center items-center sm:gap-8">
+            <span class="font-serif font-bold text-[35px] sm:text-[65px] sm:tracking-wide sm:leading-6 ">Restez informé aux </span>
+            <span class="font-serif font-bold text-[35px] sm:text-[65px] sm:tracking-wide sm:leading-6 text-[#E30613]"><span>nouvelles</span> ? </span>
+          </p>
+
+          <div class="flex items-center justify-center sm:flex-row flex-col w-full mx-auto gap-[30px]">
+
+            <!-- ceci constitue premier element -->
+            <div class="">
+              <!-- gerer la rectangle d'abord -->
+              <div class="bg-white h-[397px] w-[310px] sm:w-[381px] border border-[#00000033]">
+                <div class="bg-[url(images/element1.jpg)] bg-cover bg-no-repeat h-1/2"></div>
+                <div class="sm:py-6 py-4 px-4 flex flex-col items-start justify-center gap-[8px] sm:gap-[12px]">
+                  <p class="font-serif font-bold text-sm">Nouvelle fonctionnalités ajoutés pour vous gagnés plus de gains </p>
+                  <p class="font-sans font-normal text-sm text-[#373737]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                  <p class="font-ubuntu font-normal text-[12px] leading-6 text-[#373737]">22 Novembre 2024</p>
+                  <div class="flex gap-2 items-center justify-center">
+                    <p class="font-medium text-[12px] leading-6 text-[#FD7226]">REDAD MORE</p>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAASCAYAAACEnoQPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEZSURBVHgBrZPfTcMwEMbvrjW8MoIloPDYEcgEZISygRUGACZImKBigrABbADvgJQReKuUP76eLbVS09hppX5SZCv2z1/85Q6gJzb6Ag4U7YK3mifqo8tuzNFwB82cGedyTN6Yq7uj4Gnx924BXvwCUbkyWsdgHHpps1nJACkif2PXJFhU/6PO2xNt/SBD5a5gSeVwyGdvYXEiS4lMxREXoQARImrNZYo0Kf1VrE1U8fs56ryRD5D51W+UAPs1EIXdZkK8987Mb/3g4jCdL2XQ8lRTbp7760GYs9kTA6cOrG09+LsGA2sfJSgOBxV0dvUt4NKDUm0hcM/ZBWTp7Eum2qWs8p9og+w2Bil3Rw2BgEbVZteLsYY4idaauHZJ0w6i3QAAAABJRU5ErkJggg==" alt="icon next">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ceci constitue premier element -->
+            <div class="">
+              <!-- gerer la rectangle d'abord -->
+              <div class="bg-white h-[397px] w-[310px] sm:w-[381px]  border border-[#00000033]">
+                <div class="bg-[url(images/element22.jpg)] bg-cover bg-no-repeat h-1/2"></div>
+                <div class="sm:py-6 py-4 px-4 flex flex-col items-start justify-center gap-[8px] sm:gap-[12px]">
+                  <p class="font-serif font-bold text-sm">Nouvelle fonctionnalités ajoutés pour vous gagnés plus de gains </p>
+                  <p class="font-sans font-normal text-sm text-[#373737]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                  <p class="font-ubuntu font-normal text-[12px] leading-6 text-[#373737]">22 Novembre 2024</p>
+                  <div class="flex gap-2 items-center justify-center">
+                    <p class="font-medium text-[12px] leading-6 text-[#FD7226]">REDAD MORE</p>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAASCAYAAACEnoQPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEZSURBVHgBrZPfTcMwEMbvrjW8MoIloPDYEcgEZISygRUGACZImKBigrABbADvgJQReKuUP76eLbVS09hppX5SZCv2z1/85Q6gJzb6Ag4U7YK3mifqo8tuzNFwB82cGedyTN6Yq7uj4Gnx924BXvwCUbkyWsdgHHpps1nJACkif2PXJFhU/6PO2xNt/SBD5a5gSeVwyGdvYXEiS4lMxREXoQARImrNZYo0Kf1VrE1U8fs56ryRD5D51W+UAPs1EIXdZkK8987Mb/3g4jCdL2XQ8lRTbp7760GYs9kTA6cOrG09+LsGA2sfJSgOBxV0dvUt4NKDUm0hcM/ZBWTp7Eum2qWs8p9og+w2Bil3Rw2BgEbVZteLsYY4idaauHZJ0w6i3QAAAABJRU5ErkJggg==" alt="icon next">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ceci constitue premier element -->
+            <div class="">
+              <!-- gerer la rectangle d'abord -->
+              <div class="bg-white h-[397px] w-[310px] sm:w-[381px]  border border-[#00000033]">
+                <div class="bg-[url(images/element3.png)] bg-cover bg-no-repeat h-1/2"></div>
+                <div class="sm:py-6 py-4 px-4 flex flex-col items-start justify-center gap-[8px] sm:gap-[12px]">
+                  <p class="font-serif font-bold text-sm">Nouvelle fonctionnalités ajoutés pour vous gagnés plus de gains </p>
+                  <p class="font-sans font-normal text-sm text-[#373737]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                  <p class="font-ubuntu font-normal text-[12px] leading-6 text-[#373737]">22 Novembre 2024</p>
+                  <div class="flex gap-2 items-center justify-center">
+                    <p class="font-medium text-[12px] leading-6 text-[#FD7226]">REDAD MORE</p>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAASCAYAAACEnoQPAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEZSURBVHgBrZPfTcMwEMbvrjW8MoIloPDYEcgEZISygRUGACZImKBigrABbADvgJQReKuUP76eLbVS09hppX5SZCv2z1/85Q6gJzb6Ag4U7YK3mifqo8tuzNFwB82cGedyTN6Yq7uj4Gnx924BXvwCUbkyWsdgHHpps1nJACkif2PXJFhU/6PO2xNt/SBD5a5gSeVwyGdvYXEiS4lMxREXoQARImrNZYo0Kf1VrE1U8fs56ryRD5D51W+UAPs1EIXdZkK8987Mb/3g4jCdL2XQ8lRTbp7760GYs9kTA6cOrG09+LsGA2sfJSgOBxV0dvUt4NKDUm0hcM/ZBWTp7Eum2qWs8p9og+w2Bil3Rw2BgEbVZteLsYY4idaauHZJ0w6i3QAAAABJRU5ErkJggg==" alt="icon next">
+                  </div>
+                </div>
+              </div>
+            </div>
+   
+          </div>
+
+          <button class="w-[216px] h-[54px] flex items-center justify-center gap-2 bg-[#E30613] text-white">
+            LEARN MORE
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAYABkDAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/igAoAKACgAoAKACgAoAKACgAoAKAP/Z" alt="">
+          </button>
+        </section>
+
+        <!-- <section class="bg-[#F5F5F5] bg-[url(images/revuplogobg.png)] rounded-b-[90px] flex items-center mx-auto w-full justify-center pt-[162px] pb-[127px] gap-[164px] z-10">
+          <div class="flex flex-col gap-4 w-[500px]">
+            <img src="images/Mockup.png" alt="mockup de l'app">
+            <div class="flex items-center justify-center gap-2 w-[500px]">
+              <img src="images/playstore.png" alt="playstore image" class="w-[235px]">
+              <img src="images/appstore.png" alt="app store image" class="w-[235px]">
+            </div>
+          </div>
+
+          <div class="flex flex-col justify-start items-start gap-[36px]">
+            <div class="flex flex-col gap-1">
+              <p class="font-seif font-bold text-[40px] leading-6">Devenez Fondateur</p>
+              <p class="font-mono font-semibold text-white text-[12px] w-[243px] leading-6 bg-[#E30613]">Accès privilégié et avantages exclusifs !</p>
+            </div>
+            <p class="font-serif font-normal text-base text-[#2C2C2D] leading-6">The US Overseas Cooperative Development Council is an alliance of </p>
+            <ul class="style-none flex flex-col gap-[16px]">
+              <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                <img src="images/list.jpg" alt="check icon">
+                Accès anticipé à l'application (avant juillet)
+              </li>
+              
+              <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                <img src="images/list.jpg" alt="check icon">
+                Entrée dans le groupe privé des fondateurs (WhatsApp VIP)
+              </li>
+
+              <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                <img src="images/list.jpg" alt="check icon">
+                Badge fondateur sur l’appli
+              </li>
+
+              <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                <img src="images/list.jpg" alt="check icon">
+                Réductions à vie sur les options premium
+              </li>
+
+              <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                <img src="images/list.jpg" alt="check icon">
+                Cadeaux exclusifs à la sortie
+              </li>
+            </ul>
+
+            <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[287px] h-[70px] rounded-full">
+              <p class="font-mono font-bold text-base text-white">Devenez Fondateur</p>
+              <img src="images/ei_arrow-right.png" alt="">
+            </button>
+          </div>
+        </section> -->
+       
+        <!-- deux grandes secttions ici -->
+        <div class="bg-[#000000]">
+           <section class="bg-[#F5F5F5] bg-[url(images/revuplogobg.png)] rounded-b-[90px] flex sm:flex-row flex-col items-center mx-auto w-full justify-center px-4 pt-[110px] sm:pt-[162px] pb-[127px] gap-[110px] sm:gap-[164px] z-10">
+            <div class="flex flex-col gap-4">
+              <img src="/assets/Mockup-B26ken_Z.png" alt="mockup de l'app" class="">
+              <div class="flex items-center justify-center gap-2">
+                <img src="/assets/playstore-j9uBXa_x.png" alt="playstore image" class="sm:w-[235px] w-[150px]">
+                <img src="/assets/appstore-DchLchSh.png" alt="app store image" class="sm:w-[235px] w-[150px]">
+              </div>
+            </div>
+
+            <div class="flex flex-col justify-start items-start gap-[36px]">
+              <div class="flex flex-col sm:gap-1">
+                <p class="font-seif font-bold text-[30px] sm:text-[40px] sm:leading-6">Devenez Fondateur</p>
+                <p class="font-mono font-semibold text-white text-[12px] w-[243px] leading-6 bg-[#E30613]">Accès privilégié et avantages exclusifs !</p>
+              </div>
+              <p class="font-serif font-normal text-base text-[#2C2C2D] sm:leading-6">The US Overseas Cooperative Development Council is an alliance of </p>
+              <ul class="style-none flex flex-col gap-[12px] sm:gap-[16px]">
+                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAcAB0DAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+pr9un/goPd/BLWbn4R/BxNMv/iLDaRyeKPFd9HDqWm+CXu4/MtdMsdMffa6l4n+zvFe3H9pLLpekwy2sNxY6pdXNxb6b+O+IPiTPIK88lyNUqmZxgni8ZUUatLAOavClTpO8KuL5Wqkvap0aMXBSp1ZzlGl/IPj99I+twHjavBvBMcLiOJoUYyzbN8RGGKwuRSrR5qWEoYWV6WKzX2coV6n1lTwmDhOlCpQxdWrVp4X8V9Y/aq/aW1zVZNZv/jz8WUvpJDL/AMS3x34i0SyhYsWItNL0W/0/S7KPJP7mzs4IQPlCbQBX4TX4v4qxFZ16nEWcqo3zfuswxNCEXe/uUaFSnRpr+7CEY9LWP4Zxvi74pY/Fyx2I8QuMFiJSc/8AZeIMywFCDbu1RwmBxGGwlCN/sUaFOFtOW2h9K/DL/gstL+y3pq6l+2J43j134R7lsh4o1COOb4haXe+UGt4tGt7KJb7x5I8UE73Givb3WvyqZL+DUxFZzWlz+o+HnH/E2MzShk+Oo4jPcNW5YyxMYR+t5fDmjH6zXrpRhVwsL/vfrD9q3JOnWlNKjV/p/wCj348+JmdcT4Hg/OsHmHHWXYxwhUzGnRh/a/D9Fzp0v7Sx2OUadHE5ZRcv9reYzWKcqkZYfGVKqhg8T+x37BP7UfxJ/bP+EVz+0l4h+Dt78DfhB8RdU+1fs5eEfGMjzfFrxP8AC2zE8Vr8WPiNDbXR0PwwPiLO63ng7wNpEGqjSvDOm2vid/HHi2y8a6XDoP8AQyd1fo9j/QZpLZ83W6211Vn19T+T/wDaX1z4ofEPQvjL4s8GaxcaZ8XfEv8AwlXi7w9qEkFldSN4zlvbjxBZafcW+p28+ntbalqCLo91FdWr20dndSL5IRAg/iTC47C4ziSGPz6m8Rg8bmc6uaQnKpCXscXWl9YmpUpQqRnQjVlUgoSi1KnFKx/inlGeZVm/iRh8+47wzzDJ854mq4riijVqYilNYLN8ZVWY1o1MLOjiIVcDTxNTE0FQnSlGph6cYciSS/Ijwt/wVw8OWnwv1qX4i/D3UrT43aCw02DwrpCXNl4Y8Sajukhlvnvr/wC13/hODT5omXV9Jv01O+ifyk06a+aa4TTv1DF+DeJnm1BZZmVKeQ4he1li6zjUxWFpWUlTVOnyU8ZKqmnRrU3SptXdWNPli6v9RZt9DXM63FmAhwzxJha3AWYr61UzfGypV82yzDWjONCOHw/scPnFTEwkngsZh3hMPOPPLEww6hTlifJv2bfgt8Wv29fijb/tEftL3FzefCXQb26Hhvw1LHPYaH4inguWaPwx4U0nzf8AQ/BemXSIPEOrs9xd67cWY0ea91LUH1bUdK9jijPcn8Pcplw1wtGMM4xEIfWsUnGpiMNGUUnisXWt7+Oqwb+rUUoww8Z+2jClTVGnV+x8UOOuDvo8cJ1PDTwsp0qHGWY0KP8AamawlTxGPy2nUpJSzXOMZyfv88xVGUv7NwSjTo5fTr/XadDC4aODw2L/ANJb/gnR4jv/ABJ+x98I21GQyy6Baa/4StGwqrHo3hjxLq2kaBZxRqAsVvpehW2naVbRKAsdvYxqoAAA+48NMZXxvBmUVMROVWrSWKwvtJtylKnhsZXpUE29f3dGNOkr9II/ZPo25zjc78G+EsRmFepicThY5plnt603OpPD5dm2NwuCjKUm21QwUMPho3bfLRTvqfg5+27+zxrX7P3xv8S2n2C4HgXxlqWo+KfAOsCFvsM+majdNd3ehidEWBdR8NXdy2m3NrkT/Yxp2otEkGpW5b+d+PuGa/Def4qHs5f2fjqtXF5dW5X7OVKrNznh+ZLl9rhZydKUPi9n7Kq0o1Yn+evjz4bY7w549zSj9Xqf2BnmKxObcPY3kfsKmFxVV1q2A9pGKprE5XWqvC1aN1U9gsNiXCNPFU7/AIbfE3/gm/8AAv4o/G1fjDrEusadZ6jcDU/GPgLSBbWWheLdcRt7anPewiO/0sam+JPEMFgVl1afzLuK70+8uby4uPQyrxO4gynIXktBUKk6UfZYLMK3NPEYPDvRUowd6dX2S0w0ql1RjaDhUhCEY/TcK/Se8QOEuA3wVgo4LE1sNTeFyTiHG+1r5hk2Aa5VhadCblhsX9UjeOW1MQnHB0+WjOjiaFKjSpfo58N/hvqXiTVfCfwx+GnhhZ769fT/AA34V8MaFZw2ttbwxIltaWlrbwrFaafpthbR7pZX8iy0+ygkuJ5IbaGR1+Hw+HzDO8xhQoRrY7McwxFleTqVa9erJudSpUm+7c6tWpJRjFSnOSimz8My/AZ/xpxDRwODp43POIc/x7S55zxGLxuNxVRzq18RXqyb1lKdfE4mvNQpwVStWqRhGUl/YN+zx8J4Pgd8Ffh58LYp47qfwpoEcOq3cI2wXmv6lc3Gs+Iru3G1WFrca7qOoSWgkBlW1aFZWeRWY/2fwzk0eH8hyzKFJTlg8Mo1px+GeJqylXxU46J8ksRVqOF/e5OVNt3Z/sn4bcH0+AuBuGuEoVI1amUZdGGLrQVqdbMcVVq47M61NWT9lUzDE4mdFSvNUnBSbkm31/xD+GvgP4seGbzwf8RfC2leLfDl9tabTtUhZvKmT/V3VjdwPDf6ZfRc+Tf6bdWl7DlvKnTcc9uZ5Vl2cYSeCzPCUcZhanxUq0W7NbTpzi41KVRfZqUpwqR6SR7PEnC/D3GGV1sl4mynB5xlleznhsXBvknH4a2HrU5QxGFxEPsYjDVaNeF3yVI3Z+bPib/glT+zW/iCzNhrnxZ0ay1G4jzpen+J/Dk9naI9wkZjtZdY8G6rqRQKxAN1qF1JwCZCc5/LcX4QcLPFQ9niM5oU6so/uaeLwsoQTna0JV8DWq2t/PVm/M/l/NfojeF8syofVsfxhgaGKqRvhMNmuWVKFGMqqi40Z43JMXirWdk62Jqy0Xvb3+1PgX+yp8Ef2dreY/DbwjHba3d25tdR8XazcPrPivULdmV3t31W5UCxtJGjiabT9Ht9N06aSGKaW0eZBJX3nD/CGQcMxl/ZeCUMROPJVxteTr4ypFtNxdaS9yDai3ToxpUm4qTg2rn7pwB4RcB+GlOb4XyaNLH1qbpYnOcdUljc3xFNtN05YuqkqFGTjBzw+Cp4XDTlCE50ZTipH0VX0x+lgP/Z" alt="check icon">
+                  Accès anticipé à l'application (avant juillet)
+                </li>
+                
+                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAcAB0DAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+pr9un/goPd/BLWbn4R/BxNMv/iLDaRyeKPFd9HDqWm+CXu4/MtdMsdMffa6l4n+zvFe3H9pLLpekwy2sNxY6pdXNxb6b+O+IPiTPIK88lyNUqmZxgni8ZUUatLAOavClTpO8KuL5Wqkvap0aMXBSp1ZzlGl/IPj99I+twHjavBvBMcLiOJoUYyzbN8RGGKwuRSrR5qWEoYWV6WKzX2coV6n1lTwmDhOlCpQxdWrVp4X8V9Y/aq/aW1zVZNZv/jz8WUvpJDL/AMS3x34i0SyhYsWItNL0W/0/S7KPJP7mzs4IQPlCbQBX4TX4v4qxFZ16nEWcqo3zfuswxNCEXe/uUaFSnRpr+7CEY9LWP4Zxvi74pY/Fyx2I8QuMFiJSc/8AZeIMywFCDbu1RwmBxGGwlCN/sUaFOFtOW2h9K/DL/gstL+y3pq6l+2J43j134R7lsh4o1COOb4haXe+UGt4tGt7KJb7x5I8UE73Givb3WvyqZL+DUxFZzWlz+o+HnH/E2MzShk+Oo4jPcNW5YyxMYR+t5fDmjH6zXrpRhVwsL/vfrD9q3JOnWlNKjV/p/wCj348+JmdcT4Hg/OsHmHHWXYxwhUzGnRh/a/D9Fzp0v7Sx2OUadHE5ZRcv9reYzWKcqkZYfGVKqhg8T+x37BP7UfxJ/bP+EVz+0l4h+Dt78DfhB8RdU+1fs5eEfGMjzfFrxP8AC2zE8Vr8WPiNDbXR0PwwPiLO63ng7wNpEGqjSvDOm2vid/HHi2y8a6XDoP8AQyd1fo9j/QZpLZ83W6211Vn19T+T/wDaX1z4ofEPQvjL4s8GaxcaZ8XfEv8AwlXi7w9qEkFldSN4zlvbjxBZafcW+p28+ntbalqCLo91FdWr20dndSL5IRAg/iTC47C4ziSGPz6m8Rg8bmc6uaQnKpCXscXWl9YmpUpQqRnQjVlUgoSi1KnFKx/inlGeZVm/iRh8+47wzzDJ854mq4riijVqYilNYLN8ZVWY1o1MLOjiIVcDTxNTE0FQnSlGph6cYciSS/Ijwt/wVw8OWnwv1qX4i/D3UrT43aCw02DwrpCXNl4Y8Sajukhlvnvr/wC13/hODT5omXV9Jv01O+ifyk06a+aa4TTv1DF+DeJnm1BZZmVKeQ4he1li6zjUxWFpWUlTVOnyU8ZKqmnRrU3SptXdWNPli6v9RZt9DXM63FmAhwzxJha3AWYr61UzfGypV82yzDWjONCOHw/scPnFTEwkngsZh3hMPOPPLEww6hTlifJv2bfgt8Wv29fijb/tEftL3FzefCXQb26Hhvw1LHPYaH4inguWaPwx4U0nzf8AQ/BemXSIPEOrs9xd67cWY0ea91LUH1bUdK9jijPcn8Pcplw1wtGMM4xEIfWsUnGpiMNGUUnisXWt7+Oqwb+rUUoww8Z+2jClTVGnV+x8UOOuDvo8cJ1PDTwsp0qHGWY0KP8AamawlTxGPy2nUpJSzXOMZyfv88xVGUv7NwSjTo5fTr/XadDC4aODw2L/ANJb/gnR4jv/ABJ+x98I21GQyy6Baa/4StGwqrHo3hjxLq2kaBZxRqAsVvpehW2naVbRKAsdvYxqoAAA+48NMZXxvBmUVMROVWrSWKwvtJtylKnhsZXpUE29f3dGNOkr9II/ZPo25zjc78G+EsRmFepicThY5plnt603OpPD5dm2NwuCjKUm21QwUMPho3bfLRTvqfg5+27+zxrX7P3xv8S2n2C4HgXxlqWo+KfAOsCFvsM+majdNd3ehidEWBdR8NXdy2m3NrkT/Yxp2otEkGpW5b+d+PuGa/Def4qHs5f2fjqtXF5dW5X7OVKrNznh+ZLl9rhZydKUPi9n7Kq0o1Yn+evjz4bY7w549zSj9Xqf2BnmKxObcPY3kfsKmFxVV1q2A9pGKprE5XWqvC1aN1U9gsNiXCNPFU7/AIbfE3/gm/8AAv4o/G1fjDrEusadZ6jcDU/GPgLSBbWWheLdcRt7anPewiO/0sam+JPEMFgVl1afzLuK70+8uby4uPQyrxO4gynIXktBUKk6UfZYLMK3NPEYPDvRUowd6dX2S0w0ql1RjaDhUhCEY/TcK/Se8QOEuA3wVgo4LE1sNTeFyTiHG+1r5hk2Aa5VhadCblhsX9UjeOW1MQnHB0+WjOjiaFKjSpfo58N/hvqXiTVfCfwx+GnhhZ769fT/AA34V8MaFZw2ttbwxIltaWlrbwrFaafpthbR7pZX8iy0+ygkuJ5IbaGR1+Hw+HzDO8xhQoRrY7McwxFleTqVa9erJudSpUm+7c6tWpJRjFSnOSimz8My/AZ/xpxDRwODp43POIc/x7S55zxGLxuNxVRzq18RXqyb1lKdfE4mvNQpwVStWqRhGUl/YN+zx8J4Pgd8Ffh58LYp47qfwpoEcOq3cI2wXmv6lc3Gs+Iru3G1WFrca7qOoSWgkBlW1aFZWeRWY/2fwzk0eH8hyzKFJTlg8Mo1px+GeJqylXxU46J8ksRVqOF/e5OVNt3Z/sn4bcH0+AuBuGuEoVI1amUZdGGLrQVqdbMcVVq47M61NWT9lUzDE4mdFSvNUnBSbkm31/xD+GvgP4seGbzwf8RfC2leLfDl9tabTtUhZvKmT/V3VjdwPDf6ZfRc+Tf6bdWl7DlvKnTcc9uZ5Vl2cYSeCzPCUcZhanxUq0W7NbTpzi41KVRfZqUpwqR6SR7PEnC/D3GGV1sl4mynB5xlleznhsXBvknH4a2HrU5QxGFxEPsYjDVaNeF3yVI3Z+bPib/glT+zW/iCzNhrnxZ0ay1G4jzpen+J/Dk9naI9wkZjtZdY8G6rqRQKxAN1qF1JwCZCc5/LcX4QcLPFQ9niM5oU6so/uaeLwsoQTna0JV8DWq2t/PVm/M/l/NfojeF8syofVsfxhgaGKqRvhMNmuWVKFGMqqi40Z43JMXirWdk62Jqy0Xvb3+1PgX+yp8Ef2dreY/DbwjHba3d25tdR8XazcPrPivULdmV3t31W5UCxtJGjiabT9Ht9N06aSGKaW0eZBJX3nD/CGQcMxl/ZeCUMROPJVxteTr4ypFtNxdaS9yDai3ToxpUm4qTg2rn7pwB4RcB+GlOb4XyaNLH1qbpYnOcdUljc3xFNtN05YuqkqFGTjBzw+Cp4XDTlCE50ZTipH0VX0x+lgP/Z" alt="check icon">
+                  Entrée dans le groupe privé des fondateurs (WhatsApp VIP)
+                </li>
+
+                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAgEASABIAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wAARCAAcAB0DAREAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+pr9un/goPd/BLWbn4R/BxNMv/iLDaRyeKPFd9HDqWm+CXu4/MtdMsdMffa6l4n+zvFe3H9pLLpekwy2sNxY6pdXNxb6b+O+IPiTPIK88lyNUqmZxgni8ZUUatLAOavClTpO8KuL5Wqkvap0aMXBSp1ZzlGl/IPj99I+twHjavBvBMcLiOJoUYyzbN8RGGKwuRSrR5qWEoYWV6WKzX2coV6n1lTwmDhOlCpQxdWrVp4X8V9Y/aq/aW1zVZNZv/jz8WUvpJDL/AMS3x34i0SyhYsWItNL0W/0/S7KPJP7mzs4IQPlCbQBX4TX4v4qxFZ16nEWcqo3zfuswxNCEXe/uUaFSnRpr+7CEY9LWP4Zxvi74pY/Fyx2I8QuMFiJSc/8AZeIMywFCDbu1RwmBxGGwlCN/sUaFOFtOW2h9K/DL/gstL+y3pq6l+2J43j134R7lsh4o1COOb4haXe+UGt4tGt7KJb7x5I8UE73Givb3WvyqZL+DUxFZzWlz+o+HnH/E2MzShk+Oo4jPcNW5YyxMYR+t5fDmjH6zXrpRhVwsL/vfrD9q3JOnWlNKjV/p/wCj348+JmdcT4Hg/OsHmHHWXYxwhUzGnRh/a/D9Fzp0v7Sx2OUadHE5ZRcv9reYzWKcqkZYfGVKqhg8T+x37BP7UfxJ/bP+EVz+0l4h+Dt78DfhB8RdU+1fs5eEfGMjzfFrxP8AC2zE8Vr8WPiNDbXR0PwwPiLO63ng7wNpEGqjSvDOm2vid/HHi2y8a6XDoP8AQyd1fo9j/QZpLZ83W6211Vn19T+T/wDaX1z4ofEPQvjL4s8GaxcaZ8XfEv8AwlXi7w9qEkFldSN4zlvbjxBZafcW+p28+ntbalqCLo91FdWr20dndSL5IRAg/iTC47C4ziSGPz6m8Rg8bmc6uaQnKpCXscXWl9YmpUpQqRnQjVlUgoSi1KnFKx/inlGeZVm/iRh8+47wzzDJ854mq4riijVqYilNYLN8ZVWY1o1MLOjiIVcDTxNTE0FQnSlGph6cYciSS/Ijwt/wVw8OWnwv1qX4i/D3UrT43aCw02DwrpCXNl4Y8Sajukhlvnvr/wC13/hODT5omXV9Jv01O+ifyk06a+aa4TTv1DF+DeJnm1BZZmVKeQ4he1li6zjUxWFpWUlTVOnyU8ZKqmnRrU3SptXdWNPli6v9RZt9DXM63FmAhwzxJha3AWYr61UzfGypV82yzDWjONCOHw/scPnFTEwkngsZh3hMPOPPLEww6hTlifJv2bfgt8Wv29fijb/tEftL3FzefCXQb26Hhvw1LHPYaH4inguWaPwx4U0nzf8AQ/BemXSIPEOrs9xd67cWY0ea91LUH1bUdK9jijPcn8Pcplw1wtGMM4xEIfWsUnGpiMNGUUnisXWt7+Oqwb+rUUoww8Z+2jClTVGnV+x8UOOuDvo8cJ1PDTwsp0qHGWY0KP8AamawlTxGPy2nUpJSzXOMZyfv88xVGUv7NwSjTo5fTr/XadDC4aODw2L/ANJb/gnR4jv/ABJ+x98I21GQyy6Baa/4StGwqrHo3hjxLq2kaBZxRqAsVvpehW2naVbRKAsdvYxqoAAA+48NMZXxvBmUVMROVWrSWKwvtJtylKnhsZXpUE29f3dGNOkr9II/ZPo25zjc78G+EsRmFepicThY5plnt603OpPD5dm2NwuCjKUm21QwUMPho3bfLRTvqfg5+27+zxrX7P3xv8S2n2C4HgXxlqWo+KfAOsCFvsM+majdNd3ehidEWBdR8NXdy2m3NrkT/Yxp2otEkGpW5b+d+PuGa/Def4qHs5f2fjqtXF5dW5X7OVKrNznh+ZLl9rhZydKUPi9n7Kq0o1Yn+evjz4bY7w549zSj9Xqf2BnmKxObcPY3kfsKmFxVV1q2A9pGKprE5XWqvC1aN1U9gsNiXCNPFU7/AIbfE3/gm/8AAv4o/G1fjDrEusadZ6jcDU/GPgLSBbWWheLdcRt7anPewiO/0sam+JPEMFgVl1afzLuK70+8uby4uPQyrxO4gynIXktBUKk6UfZYLMK3NPEYPDvRUowd6dX2S0w0ql1RjaDhUhCEY/TcK/Se8QOEuA3wVgo4LE1sNTeFyTiHG+1r5hk2Aa5VhadCblhsX9UjeOW1MQnHB0+WjOjiaFKjSpfo58N/hvqXiTVfCfwx+GnhhZ769fT/AA34V8MaFZw2ttbwxIltaWlrbwrFaafpthbR7pZX8iy0+ygkuJ5IbaGR1+Hw+HzDO8xhQoRrY7McwxFleTqVa9erJudSpUm+7c6tWpJRjFSnOSimz8My/AZ/xpxDRwODp43POIc/x7S55zxGLxuNxVRzq18RXqyb1lKdfE4mvNQpwVStWqRhGUl/YN+zx8J4Pgd8Ffh58LYp47qfwpoEcOq3cI2wXmv6lc3Gs+Iru3G1WFrca7qOoSWgkBlW1aFZWeRWY/2fwzk0eH8hyzKFJTlg8Mo1px+GeJqylXxU46J8ksRVqOF/e5OVNt3Z/sn4bcH0+AuBuGuEoVI1amUZdGGLrQVqdbMcVVq47M61NWT9lUzDE4mdFSvNUnBSbkm31/xD+GvgP4seGbzwf8RfC2leLfDl9tabTtUhZvKmT/V3VjdwPDf6ZfRc+Tf6bdWl7DlvKnTcc9uZ5Vl2cYSeCzPCUcZhanxUq0W7NbTpzi41KVRfZqUpwqR6SR7PEnC/D3GGV1sl4mynB5xlleznhsXBvknH4a2HrU5QxGFxEPsYjDVaNeF3yVI3Z+bPib/glT+zW/iCzNhrnxZ0ay1G4jzpen+J/Dk9naI9wkZjtZdY8G6rqRQKxAN1qF1JwCZCc5/LcX4QcLPFQ9niM5oU6so/uaeLwsoQTna0JV8DWq2t/PVm/M/l/NfojeF8syofVsfxhgaGKqRvhMNmuWVKFGMqqi40Z43JMXirWdk62Jqy0Xvb3+1PgX+yp8Ef2dreY/DbwjHba3d25tdR8XazcPrPivULdmV3t31W5UCxtJGjiabT9Ht9N06aSGKaW0eZBJX3nD/CGQcMxl/ZeCUMROPJVxteTr4ypFtNxdaS9yDai3ToxpUm4qTg2rn7pwB4RcB+GlOb4XyaNLH1qbpYnOcdUljc3xFNtN05YuqkqFGTjBzw+Cp4XDTlCE50ZTipH0VX0x+lgP/Z" alt="check icon">
+                  Badge fondateur sur l’appli
+                </li>
+
+                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                  <img src="data:image/jpeg;base64,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" alt="check icon">
+                  Réductions à vie sur les options premium
+                </li>
+
+                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
+                  <img src="data:image/jpeg;base64,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" alt="check icon">
+                  Cadeaux exclusifs à la sortie
+                </li>
+              </ul>
+
+              <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[287px] h-[70px] rounded-full cursor-pointer">
+                <p class="font-mono font-bold text-base text-white">Devenez Fondateur</p>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAYAAAAehFoBAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAHxSURBVHgB7ZiBccIwDEV/eh2gI2SDMkI6QRmBDcoGZAPYIIzQThA2oEyQbgAbqHIjDpMGYtkO9Hp+dzpzZ8f+yHIiC0gkEol/RYYIEFHBzSvbhC0XM3yJfbJ9ZFm2wb1gkU9sC7Y9ndOwbdlq+d3tezPP4pbwglNLqGlXxst9QuSPmb619QdMO8Mt4IWWltBS4y0em8szRxYYE16gsjyUwxMRfvR2hTGQeCWJz+AYlFDZypxLxMTEm+XZQbES4y7jnixPTxGDzqS5w/hCsxMSHnux8LcHTzIXAaXimbVSdKld49pkjc8h04iWXfzxMkKwttfrJCtFr2RsAV9iTOIq2nLOCr5Q+3klCjwMLqIlLAw1fDnGLyLgKHpwvUdcJ2fbXJi8xikr02AyOrNzL5y9HTp9B+m/yAOGuWVmdUAIkUOiihESQ4vEOnQuYp0O3VBI7KSdwBN5h8/Q3jr64hadNXYIWCzo3eji2Z6xBUIgz8REKTaPdl7IIzHRiJXxCxk/RyhkJSY0XnpJ5JhrO0FtQu48Kfkl8DPEhE6J0BhXpBJjQKd8oKF4l9A1xoQ613SNcPpdfPFPJTVQeyltLG9XNFxIWdJ58SXOpVMh2giZU385qpb47Papiy9dYhYDjcee0V8MNJ/b97sWAxOJROJv8g264tZIouurPgAAAABJRU5ErkJggg==" alt="">
+              </button>
+            </div>
+           </section>
+          
+          <footer class="z-5 flex flex-col gap-[50px] sm:gap-[83px] items-center justify-center pt-[100px] pb-8 px-4">
+            <div class="flex sm:flex-row flex-col justify-center gap-[30px] sm:gap-[130px]">
+                <div class="">
+                  <img src="/assets/revupfooter-X4jiFxyh.png" alt="logo revup">
+                  <p class="font-mono font-medium text-base leading-6 text-white w-[330px]">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled </p>
+                </div>
+
+                <div class="flex sm:flex-row flex-col gap-[45px] sm:gap-[97px]">
+                  <div class="flex flex-col gap-[16px] sm:gap-[38px]">
+                    <h2 class="text-[white] font-mono font-bold text-[20px]">Navigation</h2>
+                    <ul class="style-none flex flex-col gap-[17px]">
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">A propos</li>
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">FAQ</li>
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Contact</li>
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Condition Général</li>
+                    </ul>
+                  </div>
+
+                  <div class="flex flex-col gap-[16px] sm:gap-[38px]">
+                    <h2 class="text-[white] font-mono font-bold text-[20px]">Liens utiles</h2>
+                    <ul class="style-none flex flex-col gap-[17px]">
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Fonctionnalités</li>
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Actualités</li>
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Espace Media</li>
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Expert géomètres</li>
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Quincailleries</li>
+                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Constructeurs</li>
+                    </ul>
+                  </div>
+
+                  <div class="flex flex-col gap-[30px]">
+                    <h2 class="text-[white] font-mono font-bold text-[20px]">Téléchargez l’application</h2>
+                    <p class="text-[#FFFFFFB2] font-mono font-medium text-sm w-[320px] leading-6">Obtenez gratuitement l’application sur votre mobile et profitez-en.</p>
+                    <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer">
+                      <p class="font-mono font-bold text-base">Télécharger</p>
+                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACDSURBVHgB7ZTBCYAwDEXTuogjOIqb6AatGziGVydwBNfw5gg1lYJFtLSSgIc8eIQkkH8LgEBMh/bAyBLMRgMzEiABJ83HXVaAP7Ci5mFnwi4ZUkGaDVWoDX0dVT8b0AkIsKhD91AdXKFkWM7jcQjrs/sf6mXu/34LZczoeB/qwmCBngOCuhP9YzrjPgAAAABJRU5ErkJggg==" alt="download icon" class="">
+                    </button>
+                  </div>
+                </div>
+            </div>
+
+            <div class="flex sm:flex-row flex-col flex-col-reverse gap-[20px] sm:gap-[109px] items-center justify-center">
+              <p class="font-mono font-normal text-[12px] sm:text-base sm:leading-6 text-[#A19999] hover:text-[#34C759]">© 2025 Revup Apk. Tous les droits sont réservés</p>
+              <div class="flex gap-4">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAU+SURBVHgBzVq7UiNHFL09Ix7ZKoaiVnwB2jK4EAQMX4A2cVGbmP0CcOQQKXSElTkDoqXKAZA526FchajCGPEFyMUPyBkPSe1zRj14BEhqSSPtnKpWj+bR07fv+/YoiQnLy8sZdJ7rugtaaw/H6UgLUcW1quM4FfQ3zWbTv7i4qEoMUDIEPM9LPz4+buNwS1oTPuEEpTXhyvT0dM33/Vp4vyE2o5TKos+iXwsmodRJo9EoDUPUQIRgQh5evmsmVDIr68sAWFpayqZSqR1DlI+xioMQ1BchXFG8cA/Nw9/S5OTkr9EVHxYYfwtitysDEGRNSC6X2wYBBRkBAS+xsrJSQPcjWvH8/PzA5hkrQlZXV/cg8/mnp6ePl5eXFRkDyH1w5yvee1Iul3/qdX9XQowyc7CbqampnVFyodP7Hx4e9iEJGUjBerf3q26DkAgcnoK9BfmGMKK20Y0Yp9PDSSGCMHM4NXOyB3UCyn0sCQPmdIC299a1VxyhCaRiQyc+S8JAPYW+5EHMzstrbToSWgrY8PW4Qoe4QQc6MTHBOX6IzrGNI8YZHSaVCMKY/xIdc/T8MyFh0JcE5e4FOmRGFwyVwnOp8MBwoyhDYLm8mYn+r9cl0+le5TRqruM+m9KL3FFVLEETDJNMrgThTDBeMAGjG+DGvM1AWUw4pRSjXk9rSWOQjMQEjcgZ41Uxs0pd61KlA4HGz92CO/MkLBAtEEEr4Nu86LvzH/Ip7VzjjTto2TiJIMx4HsdPibrtdJ9xjCUQE1iwUEc2EEeVxAKOcvdE6bQkAEwfpBVcimOUXGyCwcXypqdj5sAwMDlQGvrynhzxxFKsRAeJVKIA532Kbh3q4WRNetr7oQRxIwJKUtYBESwWWOYY/ekGLBr0Tg9l0i1QRVtzGOuDK7c2Tygl76UPKK1rf+WOCnXR81isQxkBDBPS1JEM/Mc/MkLQF1ytHG3V3foH3VrB2MBKjRhCxobK979XrnJf5puiP8dFkPEn4yUkxN+5owOnqT7CesSW/5OQGt29jBFLF5+2tZKvcOOxmXMGjTW4+XfsZcRY/HPTUym1DwXNDFfj/B/GoVcR+6kakxT8GZnCB0GmqH1hkCmxIxPUk/FzJpaODn6hP2Jd9W6x/Gk3CDJbEUTsYNkW7SYFblTgR9YsH+tP/BghMx6ISYzeAohYQHdGZffR8lYPxewDYoLHKNgx+XktmjZ2hNKxmcs4gKg3sHqkIfQjhxAvr9eD9fvpCiLgsZZNe4BZKqPfVmLFZJ4ne/mTyvpBTcMry5igey8axYpzbxFCN8/gK0wbu+Fq5ctJKwhsMrL1446dgvHg8Tl+QwVu4U2wkIjueetORS54EK/jMJmXARCtojSaTlo7zY4cTr1YgH6qKAT047ZjIZH1XlP5TjQwx120/ei5tqAR4sUNlW2WJSWhMCHJFrfmoufbCCGbQEwRtdXjcQeSNuCcWH/D4av9xVdhPLa5aAW4F7EnCQN3r6S1Z3Ng/RBk8JqyKAmB0YvrTtc7Jlbc5kKXTwIxZg55M6c3YbsZWuXGz7fYDDUinh14MzQKrAj1ZmOcG0BmQ4fbf9SJno7aFQvc3d39MTs7+y8sxv7c3Fwa/89kRCAXZmZmfnZd9zdIwi8wPgWb5wb5hKNgvhsp9mU9eiDygc4OCPDp00byCUcULwjyWckf9IsIExpxHBLAz5+Kg3ygM1TuZjaIKL8b5hRX8sZU/6rRFeWK39/fp80XRRmT2TGhowIfDvt9S2xJaLgHaYriCyzFSnstoBZpZ0yxJRK9Dov/AEmbp/WGmEi5AAAAAElFTkSuQmCC" alt="facebook icon">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATjSURBVHgB1VrNUuNGEO6RBPiGz1BUvE+AtwIpfiqF/AQ4lxS3kCfAOeWIfcyJ9S03lhuVHMC33CIqFUwVm1rzBKsUL+DczI+tfJ888so2BmONvfZXJUaMbak/dfd0T7eUGMLGxkYGg2vb9moQBC7O07Ejgo/PfMuyahhvWq2Wd3V15YsBKEkA13XT9/f3Bzjdl7bA5xRQ2gLXUqlU3fO8evR9TTajlMpizGLcCYVQ6rzZbJaTkBqJCARycfNDLVBZP1lPRsD6+nrWcZyCJuXhWqVRCL2KCJ8obniEw8W/5fn5+XfxJ54UuP4+zO5QRiA0NJHNzc0DECjKGAj0Ymtrq4jhBxyly8vL98P8Zigi29vbR7D5/MPDw3fX19c1mQCofWjnT9z3vFqt/vTS958lop2ZF7tZWFgojFMLg+5/d3d3DEvIwApyz91fPXcRksBpBeotyheENrXd58hYg348LSQILUNFyzQ86BNw7jOZMkCm9ziOnvqsTyNcAunY8IkfZcpAP4W/5EGm0PtZl49EKwXW8Jyp1ME0GEDn5uYo49u4jF0a0cHoZFpJEHr5LzMwx+c7RKKkbxqc+yUwIDO7YKoUzXWIaG2UZAagl2Bq5TCaC30k8g1o440Yxtpfe24LyaWlgjCdbwWqrqym/8/Wb+eSADrOfYJ23pCYw0mQ4CrgiUF8ffl9XolzLCDQVnt7XbHCM9vHkIgIhUegLIMMZS9GprWLPKoshhCSUPaZaC2MC9w+SDu5FEs7uZhMBi1lH8kEoPdAaWjmK5qWKwbNaq265wbYBT71GeZ9feqLISB4V+D0OQf+kdXbU0NXxq6xJxUlgaYEudrmqS/mQUvKWiDBYoG5PUbQ7xeqFZyMiQTh49ixmOtDK59kRqGVEK6MGcSPf2VGwUoNhrQjCZH9mE+nGqmOOT0qtUin6IKtFjeqe5n41JUhU9PxJDkRp5HKPor6vOEJnvhSIAV8J556ezhyYhA0rTrDvUwSgVTEMEIiCPOLMkk0za2SOqD7XLXq8Py3MikoqX/49tQTc8iwnuzgz4UMiMTD4NFu1u2m43cmApVWPTlWgIwXeVdY/VDtAGYMLNviuHGQeNUQR3ZkRNS++Z2CddL/tb/3ihLbJ4Q3C1rlD1unRRkDQGIVwwV9xMORl9mFyyzY0vvzenzbOCtA/GA3gFmwH+1HTmBerswe2JsJl/KQCDfznJx4PEkOmhVlbxNhmGfypbeNMwEWEjF0WnedKgqIsIIyM1ph1YfNoM7/0Qm3jSDjzYJW4ORhV2tgpRFE2FA5YFlSphQ6JdmPa4PoIkKGNDHUVs+m0cQoE+tvOO3rL/al8WhzvYPqMjAxVkJeX5G3EGBbQf+cAejuVWXYvmIIkPmobXEqQFko06DPB3as2ObCkJ8GMlqGvJbpSQzbDPXZ+PkSzVBt4tmRm6Fx4Ikweu5OsgGkGzps/9EnXgwJtgyB29vbP5aXl//DinG8srKSxv8XMiZQC0tLSz/btv0rLOEXLD7FYX43yiscRf3eSOlVq8cLiL2gU2BgZkwbyysccfQQ8ljJH7UIzu2D3tiRAF9/Ko3ygk6i15x0g4j2u6un+CRvdPXPjz9RPvFGo5HWbxRl9M6OGzo68EnS91sSEYkj6kHqovgqS7HSXQuox44LbrGlJ19Kgv8Br3Z2dl7O5sIAAAAASUVORK5CYII=" alt="twitter icon">
+                <img src="data:image/png;base64,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" alt="instagram icon">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUUSURBVHgB1Vq9TitHFD6zNuAurkFIvk/AEoGEoWD9BPh25DbhPgFOlRK7TAXu0mGahO5Cl+4uii4ggXLtJ4gjHiCOFCn82ZPvW89aaxvj9c8a+5OGnZ3Fs+fs+Z0zo2RM2NjYSOHixGKxFa21g34y0HxU8axqWVYZ10qj0XCvr6+rMgYoGQGO4yQfHx/30d2TJsFnJFCaBJcTiUTNdd2a//+G2ZRSysbVxnXbI0Kps3q9XhyFqaEYAUEOXn5gCCqaL+vKEFhfX7fj8XjOMOVirsIwDA3ECL8oXniI5uC2OD8/fxT84qMC8+9B7Q5kCIZCM5JOp/fBQF4iYKATm5ubeVy+RytcXl6WwvwmFCNbW1uH0Pns09PT+5ubm7JMAJQ+pPMZ7z27urr6od//v8qIMWZOVllYWMhFKYVe7394eDiGJqSgBZnX3q9em4RMoHsO8eblDWFUbec1ZqxeP54WJghDw7mhKTxoEzDuTzJlAE0ltMOXnnVJhC6Qhg2b+ChTBtop7CULZnKdz9psxPcU8OGZfj587erDgWjJmVmObtO/FGQCYACdm5sjjatBGtskYoLRST8mvv2yuyei86J00mvoN8eih3H/RQbm4HiLET/pC2PcluUFq/YxJVmZEBiQmV0wVWq9v9VpSiOUemitKl1joqoyIRgXTKkc+GMeIwFplMJMVFf6SCPD9e/Z55hMEEYqNuMd7z1GIA0arRt2knL6tFpP/LeqtbxvNPRH9jkmE4QvFcQWz+HEzfgO8ygZAOXVM050Jm8ILh8ghGN088p3uVCrd2EnWP/ywRarsR8ce4J9+VKhB4tZsu0/g03Vbjd/9RK/td93HZlTO9BH23uopPysdXFYiSJ9+RsXmxJxZAC18gizGtBLtRcciz/rEzF2o5Q4MP6WZ8N91b7aLcZFHXvv08HJxMF4DnEpP0wsQvA+h61kIAzLNsvTSDEninmS0/s/dH7t8rucDA7GFdsCEywWRLrGgABSbH3/0ZID+2s2KYOhirZtMdeHVP6USUHzC2q3x7Nk/N+ELQPACCFJ95uCof8lEaMZd3QGRr96mz7NPIt+F4xFLcTUQIywUiOGkYlAiy6AAde/p5dSorszbK0HUi0TTybHyB/p01Ln2PN9Ymy2SUZqfpiPCuolFQLKmdLYagAeIwjz38iMwuSJVXqtGix/VWYXKa+ejD8XEsbHTymYAaNVLCReZXRWZEZhaC/TRly0ia3uIoDjZcFmfV4LLhtnBch8veBJHvw4coI0xZHZA5cS5+x4jHDZyMGo40kEoFq1L7FR9PpsaqwzARYSQe+xf99KUeCGuaiZGamw6sPNoNa93+HWGZhx/cX8NAOS8Ha1elYawQjX1fssS8qUwqQke0FpEG2MkEOqGGqrn6ZRxUgTCyXodu0vdqXx2OaiF+BexKFMGbh7Jc09m1LoH0EPvxpdnAqQFtLU63nPhRW3uXDJTgMzhoasoelFhN0MrXLj5y02Q42K20NvhgaBL0K72QmzATQumA0dbv/RJvqGhJiEwN3d3W9LS0v/sM66vLycxP2FRARKYXFx8cdYLPYzNOEnOJ98mN8Nc4Qjb86NFAbyHn0QOKCTY2BmTIvkCEcQHQy5qOQXhz0RweUDJM15yACPPxWGOaAz0jEnU8mn/u6YIX7Jiqn+VYNflF/8/v4+aU4UpczKjgs6GvDJqOdbRmIkCH/XyxTFV1iKlfZaQC3QLrjElo58aRT8Dz1UjQsK5GweAAAAAElFTkSuQmCC" alt="linkedin icon">
+              </div>
+              <p class="font-mono font-normal text-base leading-6 text-[#A19999] hover:text-[#34C759]">Condition générales</p>
+            </div>
+          </footer>
+        </div>
+    
+      </main>
+
+      
+  </body>
+</html>
