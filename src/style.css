@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-:root {
+@theme {
   --font-sans: 'Work Sans', sans-serif;
   --font-mono: 'Montserrat', sans-serif;
   --font-serif: 'Ubuntu', serif;
