@@ -2,21 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
     <link rel="stylesheet" href="path/to/tailwind.css">
-    <link rel="stylesheet" href="src/style.css">
-    <!-- <style>
-        body {
-            margin: 0;
-            font-family: 'Work Sans', sans-serif;
-        }
-    </style> -->
+    <link rel="stylesheet" href="/src/style.css">
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Work Sans', sans-serif;
+      }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RevUp App</title>
 </head>
@@ -28,10 +24,6 @@
             <i class="fa-solid fa-phone"></i>
             <p class="text-white font-bold text-sm">+229 01644343</p>
           </div>
-<!--       
-         <div class="">
-          <p class="text-white font-bold text-sm">+254 (0)716214083</p>
-         </div> -->
         </div>
         <div class="sm:py-4 flex items-center justify-center sm:justify-center sm:gap-[58px]">
           <a href="/"><img src="images/revuplogo.jpg" alt="logo revup" class="hidden sm:block"/></a>
@@ -39,9 +31,9 @@
             <ul class="flex flex-row items-center justify-center gap-[20px] sm:gap-[25px]">
               <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block">Fonctionnalités</a></li>
               <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block">Comment ca marche</a></li>
-              <li><a href="about.html" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">A propos</a></li>
+              <li><a href="./about.html" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">A propos</a></li>
               <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">Actualités</a></li>
-              <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">Contact</a></li>
+              <li><a href="./contact.html" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">Contact</a></li>
             </ul>
           </nav>
           <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer hidden sm:flex">
@@ -49,12 +41,11 @@
             <img src="images/icondown.png" alt="download icon" class="">
           </button>
         </div>
-    </header>
+     </header>
 
     <main>
         <section class="h-[261px] bg-[#34C759] rounded-b-[50px] flex items-center justify-center gap-2">
             <p class="font-serif font-bold text-[64px] leading-6">Contact</p>
-            <!-- <img src="images/aproicon.jpg" alt="arrow">  -->
         </section>
 
         <!-- Formulaire d'inscription -->
@@ -74,7 +65,7 @@
                         <p class="font-mono font-bold text-base text-white">Envoyer</p>
                     </button>
                 </form>
-                <div class="bg-[url(images/bgcontact.png)] bg-cover bg-no-repeat w-5/6 sm:w-[460px] h-[360px] sm:h-[461px] flex flex-col items-center justify-center gap-[36px] sm:gap-[32px]">
+                <div class="bg-[url('/images/bgcontact.png')] bg-cover bg-no-repeat w-5/6 sm:w-[460px] h-[360px] sm:h-[461px] flex flex-col items-center justify-center gap-[36px] sm:gap-[32px]">
                     <h2 class="font-serif font-bold text-[32px] text-[#262626]">Inscrivez-vous </h2>
                     <p class="font-mono font-normal sm:text-base text-xs text-center text-[#262626]"> Lorem Ipsum has been the industry's standard dummy text ever since the  1500s, when an unknown printer </p>
                     <div class="flex flex-col gap-4 justify-center items-center sm:p-2">
@@ -88,7 +79,7 @@
             </div>
 
              <!-- Recherchez une salle sur maps -->
-            <div class="bg-[url(images/maps.png)] bg-cover bg-no-repeat w-5/6 sm:w-[1175px] h-[389px] flex items-center px-8">
+            <div class="bg-[url('/images/maps.png')] bg-cover bg-no-repeat w-5/6 sm:w-[1175px] h-[389px] flex items-center px-8">
                 <div class="bg-white rounded-lg w-full sm:w-[471px] sm:h-[286px] h-[255px] flex flex-col gap-[40px] items-center justify-center">
                     <h2 class="font-serif font-bold text-xl sm:text-[32px] text-[#262626]">Rechercher une salle </h2>
                     <div class="flex flex-col sm:gap-4 gap-2 items-center">
