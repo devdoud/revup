@@ -1,5 +1,6 @@
 import './style.css';
 
+
 document.addEventListener("DOMContentLoaded", () => {
     const toggleIcons = document.querySelectorAll(".toggle-response");
 
@@ -21,3 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
+
+
+  // <div class="scrolling-text flex items-center justify-center">
+  //         <p class="text-white font-medium text-sm">Bienvenue sur RevUp - Transformez vos entraînements en récompenses !</p>
+  // </div>

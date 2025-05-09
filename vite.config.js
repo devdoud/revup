@@ -5,5 +5,14 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        about: 'about.html',
+        contact: 'contact.html',
+      }
+    }
+  }
 
 })
