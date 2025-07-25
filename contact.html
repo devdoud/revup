@@ -13,26 +13,39 @@
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RevUp App</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="h-14 bg-[#E30613] flex mx-auto justify-center items-center gap-8 sm:gap-4">
+        <div class="h-14 bg-[#E30613] flex mx-auto justify-center items-center gap-8 sm:gap-4" data-aos="fade-down">
           <div class="flex items-center justify-center gap-2">
             <i class="fa-solid fa-phone"></i>
             <p class="text-white font-bold text-sm">+229 0160434343</p>
           </div>
         </div>
-        <div class="sm:py-4 flex items-center justify-center sm:justify-center sm:gap-[58px]">
+        <div class="sm:py-4 flex items-center justify-center sm:justify-center sm:gap-[58px]" data-aos="fade-down">
           <a href="/"><img src="images/revuplogo.jpg" alt="logo revup" class="hidden sm:block"/></a>
           <nav class="">
-            <ul class="flex flex-row items-center justify-center gap-[20px] sm:gap-[25px]">
-              <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block">Fonctionnalités</a></li>
-              <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block">Comment ca marche</a></li>
-              <li><a href="/" class="font-medium font-sans text-xs sm:hidden">Accueil</a></li>
-              <li><a href="./about.html" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">A propos</a></li>
-              <li><a href="#" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">Actualités</a></li>
-              <li><a href="./contact.html" class="font-medium sm:font-semibold font-sans text-xs sm:text-lg">Contact</a></li>
-            </ul>
+            <ul id="navMenu" class="flex flex-row items-center justify-center gap-[20px] sm:gap-[25px]">
+            <li>
+              <a href="#" data-id="fonctionalites" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block transition" data-aos="fade-down">Fonctionnalités</a>
+            </li>
+            <li>
+              <a href="#" data-id="comment" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block transition" data-aos="fade-down">Comment ça marche</a>
+            </li>
+            <li>
+              <a href="/" data-id="accueil" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg px-3 py-1 rounded transition sm:hidden" data-aos="fade-down">Accueil</a>
+            </li>
+            <li>
+              <a href="/about.html" data-id="apropos" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg transition">À propos</a>
+            </li>
+            <li>
+              <a href="#" data-id="actualite" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg transition">Actualités</a>
+            </li>
+            <li>
+              <a href="/contact.html" data-id="contact" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg transition">Contact</a>
+            </li>
+          </ul>
           </nav>
           <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer hidden sm:flex">
             <p class="font-mono font-bold text-base">Télécharger</p>
@@ -42,12 +55,12 @@
     </header>
 
     <main >
-        <section class="h-[261px] bg-[#34C759] rounded-b-[50px] flex items-center justify-center gap-2">
+        <section class="h-[261px] bg-[#34C759] rounded-b-[50px] flex items-center justify-center gap-2" data-aos="fade-up">
             <p class="font-serif font-bold text-[64px] leading-6">Contact</p>
         </section>
 
         
-         <section class="flex flex-col items-center justify-center pt-[140px] sm:pt-[237px] pb-[60px] sm:pb-[89px] gap-[141px]">
+         <section class="flex flex-col items-center justify-center pt-[140px] sm:pt-[237px] pb-[60px] sm:pb-[89px] gap-[141px]" data-aos="fade-up">
 
             <div class="flex sm:flex-row flex-col items-center justify-center gap-[55px]">
                 <form action="" class="flex flex-col gap-[18px] pl-10 sm:gap-[31px] items-start sm:justify-start sm:items-start w-full">
@@ -76,7 +89,7 @@
                 </div>
             </div>
 
-            <div class="bg-[url('/images/maps.png')] bg-cover bg-no-repeat w-5/6 sm:w-[1175px] h-[389px] flex items-center px-8">
+            <div class="bg-[url('/images/maps.png')] bg-cover bg-no-repeat w-5/6 sm:w-[1175px] h-[389px] flex items-center px-8" data-aos="fade-up">
                 <div class="bg-white rounded-lg w-full sm:w-[471px] sm:h-[286px] h-[255px] flex flex-col gap-[40px] items-center justify-center">
                     <h2 class="font-serif font-bold text-xl sm:text-[32px] text-[#262626]">Rechercher une salle </h2>
                     <div class="flex flex-col sm:gap-4 gap-2 items-center">
@@ -94,7 +107,7 @@
 
         <div class="bg-[#000000]">
            
-            <section class="bg-[#F5F5F5] rounded-b-[90px] flex flex-col items-center mx-auto w-full justify-center px-4 py-[60px] sm:pt-[162px] sm:pb-[127px] sm:gap-[71px] gap-[50px]">
+            <section class="bg-[#F5F5F5] rounded-b-[90px] flex flex-col items-center mx-auto w-full justify-center px-4 py-[60px] sm:pt-[162px] sm:pb-[127px] sm:gap-[71px] gap-[50px]" data-aos="fade-up">
                 <h1 class="text-center font-serif font-bold text-xl sm:text-[48px]">Questions fréquemment posées</h1>
                 <div class="rounded-lg border border-gray-300 py-8 sm:px-4 px-2 flex flex-col gap-4">
 
@@ -132,7 +145,7 @@
                 </div>
             </section>
            
-           <footer class="z-5 flex flex-col gap-[50px] sm:gap-[83px] items-center justify-center pt-[100px] pb-8 px-4">
+           <footer class="z-5 flex flex-col gap-[50px] sm:gap-[83px] items-center justify-center pt-[100px] pb-8 px-4" data-aos="fade-up">
              <div class="flex sm:flex-row flex-col justify-center gap-[30px] sm:gap-[130px]">
                  <div class="">
                    <img src="images/revupfooter.png" alt="logo revup">

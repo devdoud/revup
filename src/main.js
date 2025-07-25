@@ -1,8 +1,52 @@
 import './style.css';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init(
+  {
+    duration: 1000,
+    offset: 100,
+  }
+);
+
 
 document.addEventListener("DOMContentLoaded", () => {
     const toggleIcons = document.querySelectorAll(".toggle-response");
+
+    const links = document.querySelectorAll('.nav-link');
+
+    // 1. Restaurer l'onglet actif depuis localStorage
+    const activeId = localStorage.getItem('activeNav');
+    if (activeId) {
+      const activeLink = document.querySelector(`.nav-link[data-id="${activeId}"]`);
+      if (activeLink) {
+        activeLink.classList.add('text-green-500');
+      }
+    }
+
+    // 2. Gérer le clic
+    links.forEach(link => {
+      link.addEventListener('click', function (event) {
+        // Empêche la navigation si href="#"
+        if (link.getAttribute("href") === "#") {
+          event.preventDefault();
+        }
+
+        // Supprimer la classe active des autres liens
+        links.forEach(l => l.classList.remove('text-green-500'));
+
+        // Ajouter la classe active au lien cliqué
+        link.classList.add('text-green-500');
+
+        // Sauvegarder l'ID dans localStorage
+        const linkId = link.getAttribute('data-id');
+        if (linkId) {
+          localStorage.setItem('activeNav', linkId);
+        }
+      });
+    });
+
 
     toggleIcons.forEach(icon => {
       icon.addEventListener("click", () => {
@@ -22,8 +66,3 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
-
-  // <div class="scrolling-text flex items-center justify-center">
-  //         <p class="text-white font-medium text-sm">Bienvenue sur RevUp - Transformez vos entraînements en récompenses !</p>
-  // </div>
