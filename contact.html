@@ -2,59 +2,85 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RXf+QSDCUQs6f1mka3WkBv2RFZXZ5kN44L+OZL2CjaQemZxdG5Tr7rXZxYv3+v0ZB+B1L1cXxPa+0O2AaNwzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
       body {
         margin: 0;
         font-family: 'Work Sans', sans-serif;
       }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RevUp App</title>
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-</head>
+  </head>
 <body>
-    <header>
-        <div class="h-14 bg-[#E30613] flex mx-auto justify-center items-center gap-8 sm:gap-4" data-aos="fade-down">
-          <div class="flex items-center justify-center gap-2">
-            <i class="fa-solid fa-phone"></i>
-            <p class="text-white font-bold text-sm">+229 0160434343</p>
-          </div>
+    <header class="overflow-hidden">
+      <div class="h-14 bg-[#E30613] flex justify-center items-center" data-aos="fade-down">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-phone text-white"></i>
+          <p class="text-white font-bold text-sm">+229 0160434343</p>
         </div>
-        <div class="sm:py-4 flex items-center justify-center sm:justify-center sm:gap-[58px]" data-aos="fade-down">
-          <a href="/"><img src="images/revuplogo.jpg" alt="logo revup" class="hidden sm:block"/></a>
-          <nav class="">
-            <ul id="navMenu" class="flex flex-row items-center justify-center gap-[20px] sm:gap-[25px]">
-            <li>
-              <a href="#" data-id="fonctionalites" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block transition" data-aos="fade-down">Fonctionnalités</a>
-            </li>
-            <li>
-              <a href="#" data-id="comment" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block transition" data-aos="fade-down">Comment ça marche</a>
-            </li>
-            <li>
-              <a href="/" data-id="accueil" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg px-3 py-1 rounded transition sm:hidden" data-aos="fade-down">Accueil</a>
-            </li>
-            <li>
-              <a href="/about.html" data-id="apropos" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg transition">À propos</a>
-            </li>
-            <li>
-              <a href="#" data-id="actualite" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg transition">Actualités</a>
-            </li>
-            <li>
-              <a href="/contact.html" data-id="contact" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg transition">Contact</a>
-            </li>
+      </div>
+
+      <div class="py-4 flex flex-wrap items-center justify-between px-4 sm:px-8 max-w-7xl mx-auto">
+        <a href="/" class="shrink-0" data-aos="fade-right">
+          <img src="images/revuplogo.jpg" alt="logo revup" class="h-10" />
+        </a>
+
+        <button class="sm:hidden block" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <nav class="hidden sm:flex flex-1 justify-center">
+          <ul class="flex flex-wrap items-center gap-4 text-sm sm:text-lg">
+            <li><a href="#" class="hover:text-[#E30613]">Fonctionnalités</a></li>
+            <li><a href="#" class="hover:text-[#E30613]">Comment ça marche</a></li>
+            <li><a href="/about.html" class="hover:text-[#E30613]">À propos</a></li>
+            <li><a href="#" class="hover:text-[#E30613]">Actualités</a></li>
           </ul>
-          </nav>
-          <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer hidden sm:flex">
-            <p class="font-mono font-bold text-base">Télécharger</p>
-            <img src="images/icondown.png" alt="download icon" class="">
-          </button>
-        </div>
+        </nav>
+
+        <button class="hidden sm:flex items-center gap-2 bg-[#34C759] text-black font-bold text-sm px-6 py-3 rounded-full border border-black">
+          <span>Télécharger</span>
+          <img src="images/icondown.png" alt="icon download" class="h-5" />
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="sm:hidden hidden px-4">
+        <ul class="flex flex-col gap-4 py-2">
+          <li>
+            <a href="#" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Fonctionnalités
+            </a>
+          </li>
+          <li>
+            <a href="#" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Comment ça marche
+            </a>
+          </li>
+          <li>
+            <a href="/about.html" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              À propos
+            </a>
+          </li>
+          <li>
+            <a href="#" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Actualités
+            </a>
+          </li>
+        </ul>
+
+      </div>
     </header>
 
-    <main >
+    <main class="overflow-hidden" >
         <section class="h-[261px] bg-[#34C759] rounded-b-[50px] flex items-center justify-center gap-2" data-aos="fade-up">
             <p class="font-serif font-bold text-[64px] leading-6">Contact</p>
         </section>
@@ -68,7 +94,7 @@
                         <input type="text" placeholder="Entrez votre nom" id="nom" class="border-none px-4 rounded-full sm:flex-1 h-[60px] bg-[#008E241C] placeholder:text-[#008E24] placeholder:font-normal placeholder:text-xs placeholder:font-mono outline-none">
                         <input type="text" placeholder="Entrez votre  prenom" id="prenom" class="border-none px-4 rounded-full sm:flex-1 h-[60px] bg-[#008E241C] placeholder:text-[#008E24] placeholder:font-normal placeholder:text-xs placeholder:font-mono outline-none">
                     </div>
-                    <input type="text" placeholder="Entrez votre nom" class="border-none px-4 rounded-full w-5/6 sm:w-[651px] h-[60px] bg-[#008E241C] placeholder:text-[#008E24] placeholder:font-normal placeholder:text-xs placeholder:font-mono outline-none">
+                    <!-- <input type="text" placeholder="Entrez votre nom" class="border-none px-4 rounded-full w-5/6 sm:w-[651px] h-[60px] bg-[#008E241C] placeholder:text-[#008E24] placeholder:font-normal placeholder:text-xs placeholder:font-mono outline-none"> -->
     
                     <textarea name="commentaire" id="commentaire" placeholder="Entrez votre nom" class="border-none p-4 rounded-xl w-5/6 sm:w-[651px] h-[179px] bg-[#008E241C] placeholder:text-[#008E24] placeholder:font-normal placeholder:text-xs placeholder:font-mono outline-none"></textarea>
     
@@ -145,56 +171,62 @@
                 </div>
             </section>
            
-           <footer class="z-5 flex flex-col gap-[50px] sm:gap-[83px] items-center justify-center pt-[100px] pb-8 px-4" data-aos="fade-up">
-             <div class="flex sm:flex-row flex-col justify-center gap-[30px] sm:gap-[130px]">
-                 <div class="">
-                   <img src="images/revupfooter.png" alt="logo revup">
-                   <p class="font-mono font-medium text-base leading-6 text-white w-[330px]">Vous n’êtes pas là par hasard. Vous êtes de ceux qui osent croire, construire, et faire bouger les choses. En devenant fondateur , vous n’intégrez pas une app. Vous marquez l’histoire.Merci d’être là, au début de tout.</p>
-                 </div>
- 
-                 <div class="flex sm:flex-row flex-col gap-[45px] sm:gap-[97px]">
-                   <div class="flex flex-col gap-[16px] sm:gap-[38px]">
-                     <h2 class="text-[white] font-mono font-bold text-[20px]">Navigation</h2>
-                     <ul class="style-none flex flex-col gap-[17px]">
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">A propos</li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">
-                        <a href="/contact.html">FAQ</a>
-                       </li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Contact</li>
-                     </ul>
-                   </div>
- 
-                   <div class="flex flex-col gap-[16px] sm:gap-[38px]">
-                     <h2 class="text-[white] font-mono font-bold text-[20px]">Liens utiles</h2>
-                     <ul class="style-none flex flex-col gap-[17px]">
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Fonctionnalités</li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Actualités</li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Espace Media</li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Autre ...</li>
-                     </ul>
-                   </div>
- 
-                   <div class="flex flex-col gap-[30px]">
-                     <h2 class="text-[white] font-mono font-bold text-[20px]">Téléchargez l’application</h2>
-                     <p class="text-[#FFFFFFB2] font-mono font-medium text-sm w-[320px] leading-6">Obtenez gratuitement l’application sur votre mobile et profitez-en.</p>
-                     <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer">
-                       <p class="font-mono font-bold text-base">Télécharger</p>
-                       <img src="images/icondown.png" alt="download icon" class="">
-                     </button>
-                   </div>
-                 </div>
-             </div>
- 
-             <div class="flex sm:flex-row flex-col flex-col-reverse gap-[20px] sm:gap-[109px] items-center justify-center">
-               <p class="font-mono font-normal text-[12px] sm:text-base sm:leading-6 text-[#A19999] hover:text-[#34C759]">© 2025 Revup Apk. Tous les droits sont réservés</p>
-               <div class="flex gap-4">
-                <img src="images/youtube.png" alt="twitter icon">
-                <a href="https://www.facebook.com/share/1CAFtF5dCh/"><img src="images/face.png" alt="facebook icon"></a>           
-                <a href="https://www.instagram.com/revup_africa?igsh=MWhlYzJiMWd5bzhlMA=="><img src="images/insta.png" alt="instagram icon"></a>      
-                <img src="images/linkedin.png" alt="linkedin icon">
+           <footer class="z-5 flex flex-col gap-8 items-start justify-start md:justify-center md:items-center pt-[80px] px-2 pb-8 overflow-x-hidden" data-aos="fade-up">
+            <div class="flex flex-col xl:flex-row flex-wrap justify-start items-start gap-12 lg:gap-[160px]" data-aos="fade-up">
+              <!-- Logo + Text -->
+              <div data-aos="fade-right" class="max-w-[330px]">
+                <img src="images/revupfooter.png" alt="logo revup" class="mb-4">
+                <p class="font-mono font-medium text-xs md:text-base leading-6 text-white w-full">
+                  Vous n’êtes pas là par hasard. Vous êtes de ceux qui osent croire, construire, et faire bouger les choses. En devenant fondateur, vous n’intégrez pas une app. Vous marquez l’histoire. Merci d’être là, au début de tout.
+                </p>
               </div>
-               <p class="font-mono font-normal text-base leading-6 text-[#A19999] hover:text-[#34C759]">Condition générales</p>
-             </div>
+
+              <!-- Navigation & Liens utiles & App -->
+              <div class="flex flex-col md:flex-row flex-wrap gap-10 md:gap-[90px]" data-aos="fade-left">
+                <!-- Navigation -->
+                <div class="flex flex-col gap-4 sm:gap-8">
+                  <h2 class="text-white font-mono font-bold text-sm md:text-base">Navigation</h2>
+                  <ul class="flex flex-col gap-3">
+                    <li><a href="/about.html" class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">A propos</a></li>
+                    <li><a href="/contact.html" class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">FAQ</a></li>
+                    <li><a href="/contact.html" class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Contact</a></li>
+                  </ul>
+                </div>
+
+                <!-- Liens utiles -->
+                <div class="flex flex-col gap-4 sm:gap-8">
+                  <h2 class="text-white font-mono font-bold text-sm md:text-base">Liens utiles</h2>
+                  <ul class="flex flex-col gap-3">
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Fonctionnalités</li>
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Actualités</li>
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Espace Media</li>
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Autre ...</li>
+                  </ul>
+                </div>
+
+                <!-- Application -->
+                <div class="flex flex-col gap-6">
+                  <h2 class="text-white font-mono font-bold text-sm md:text-base">Téléchargez l’application</h2>
+                  <p class="text-[#FFFFFFB2] font-mono font-medium text-xs leading-6 break-words">Obtenez gratuitement l’application <br /> sur votre mobile et profitez-en.</p>
+                  <button class="flex gap-2 items-center justify-center bg-[#34C759] w-full max-w-[214px] h-[62px] rounded-full border border-black cursor-pointer">
+                    <p class="font-mono font-bold text-sm">Télécharger</p>
+                    <img src="images/icondown.png" alt="download icon">
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer base -->
+            <div class="flex flex-col md:flex-row md:justify-between items-start justify-start gap-4 mt-12 text-center sm:text-left">
+              <p class="font-mono font-normal text-xs sm:text-sm text-[#A19999] hover:text-[#34C759]">© 2025 Revup Apk. Tous les droits sont réservés</p>
+              <div class="flex gap-4">
+                <img src="images/youtube.png" alt="youtube icon" class="w-6 h-6">
+                <a href="https://www.facebook.com/share/1CAFtF5dCh/"><img src="images/face.png" alt="facebook icon" class="w-6 h-6"></a>
+                <a href="https://www.instagram.com/revup_africa?igsh=MWhlYzJiMWd5bzhlMA=="><img src="images/insta.png" alt="instagram icon" class="w-6 h-6"></a>
+                <img src="images/linkedin.png" alt="linkedin icon" class="w-6 h-6">
+              </div>
+              <p class="font-mono font-normal text-xs sm:text-sm text-[#A19999] hover:text-[#34C759]">Conditions générales</p>
+            </div>
            </footer>
         </div>
     </main>

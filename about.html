@@ -2,67 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Work Sans', sans-serif;
-        }
-    </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RevUp App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-RXf+QSDCUQs6f1mka3WkBv2RFZXZ5kN44L+OZL2CjaQemZxdG5Tr7rXZxYv3+v0ZB+B1L1cXxPa+0O2AaNwzw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/src/style.css">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-</head>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Work Sans', sans-serif;
+      }
+    </style>
+    <title>RevUp App</title>
+  </head>
 <body>
-    <header>
-        <div class="h-14 bg-[#E30613] flex mx-auto justify-center items-center gap-8 sm:gap-4" data-aos="fade-down">
-          <div class="flex items-center justify-center gap-2">
-            <!-- <img src="images/telicon.jpg" alt="phone icon"> -->
-            <i class="fa-solid fa-phone"></i>
-            <p class="text-white font-bold text-sm">+229 0160434343</p>
-          </div>
+    <header class="overflow-hidden">
+      <div class="h-14 bg-[#E30613] flex justify-center items-center" data-aos="fade-down">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-phone text-white"></i>
+          <p class="text-white font-bold text-sm">+229 0160434343</p>
         </div>
-        <div class="sm:py-4 flex items-center justify-center sm:justify-center sm:gap-[58px]" datza-aos="fade-up">
-          <a href="/"><img src="images/revuplogo.jpg" alt="logo revup" class="hidden sm:block"/></a>
-          <nav class="">
-            <ul id="navMenu" class="flex flex-row items-center justify-center gap-[20px] sm:gap-[25px]">
-            <li>
-              <a href="#" data-id="fonctionalites" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block transition">Fonctionnalités</a>
-            </li>
-            <li>
-              <a href="#" data-id="comment" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg hidden sm:block transition">Comment ça marche</a>
-            </li>
-            <li>
-              <a href="/" data-id="accueil" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg px-3 py-1 rounded transition sm:hidden">Accueil</a>
-            </li>
-            <li>
-              <a href="/about.html" data-id="apropos" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg transition">À propos</a>
-            </li>
-            <li>
-              <a href="#" data-id="actualite" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg transition">Actualités</a>
-            </li>
-            <li>
-              <a href="/contact.html" data-id="contact" class="nav-link font-medium sm:font-semibold font-sans text-xs sm:text-lg transition">Contact</a>
-            </li>
+      </div>
+
+      <div class="py-4 flex flex-wrap items-center justify-between px-4 sm:px-8 max-w-7xl mx-auto">
+        <a href="/" class="shrink-0" data-aos="fade-right">
+          <img src="images/revuplogo.jpg" alt="logo revup" class="h-10" />
+        </a>
+
+        <button class="sm:hidden block" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+          <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+        <nav class="hidden sm:flex flex-1 justify-center">
+          <ul class="flex flex-wrap items-center gap-4 text-sm sm:text-lg">
+            <li><a href="#" class="hover:text-[#E30613]">Fonctionnalités</a></li>
+            <li><a href="#" class="hover:text-[#E30613]">Comment ça marche</a></li>
+            <li><a href="#" class="hover:text-[#E30613]">Actualités</a></li>
+            <li><a href="/contact.html" class="hover:text-[#E30613]">Contact</a></li>
           </ul>
-          </nav>
-          <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer hidden sm:flex">
-            <p class="font-mono font-bold text-base">Télécharger</p>
-            <img src="images/icondown.png" alt="download icon" class="">
-          </button>
-        </div>
+        </nav>
+
+        <button class="hidden sm:flex items-center gap-2 bg-[#34C759] text-black font-bold text-sm px-6 py-3 rounded-full border border-black">
+          <span>Télécharger</span>
+          <img src="images/icondown.png" alt="icon download" class="h-5" />
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="sm:hidden hidden px-4">
+        <ul class="flex flex-col gap-4 py-2">
+          <li>
+            <a href="#" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Fonctionnalités
+            </a>
+          </li>
+          <li>
+            <a href="#" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Comment ça marche
+            </a>
+          </li>
+          <li>
+            <a href="#" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Actualités
+            </a>
+          </li>
+          <li>
+            <a href="/contact.html" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Contact
+            </a>
+          </li>
+        </ul>
+
+      </div>
     </header>
-    <main>
+    <main class="overflow-x-hidden">
         <section class="h-[261px] bg-[#34C759] rounded-b-[50px] flex items-center justify-center gap-2" data-aos="fade-up">
             <!-- <p class="font-serif font-bold text-[64px] leading-6">A propos</p>
             <img src="images/aproicon.jpg" alt="arrow"> -->
             <img src="images/apropo.png" alt="apropos" data-aos="fade-down">
         </section>
 
-        <section class="pt-[150px] sm:px-[177px] flex justify-center items-center sm:gap-[40px] sm:mx-auto mb-[82px] px-4" data-aos="fade-up">
-            <div class="sm:flex-1">
+        <section class="pt-[150px] sm:px-[177px] flex flex-col md:flex-row lg:flex-row justify-center items-center gap-[60px] mx-auto mb-[82px] px-4" data-aos="fade-up">
+            <div class="sm:flex-1" data-aos="fade-right">
                 <div class="flex flex-col sm:items-start items-center sm:gap-6 gap-2 font-serif font-bold text-3xl sm:text-[41px] sm:leading-6 mb-[33px]">
                     <span>C’est quoi app</span>
                     <span><span class="text-[#E30613]">revup </span>?</span>
@@ -101,13 +126,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="sm:flex-1 relative hidden sm:block">
-                <img src="images/damesport.png" alt="dame au sport" class="relative">
-                <img src="images/iconstat.png" alt="icon sous forme de stat" class="absolute right-45 top-145">
+            <div class="relative h-[600px] md:h-[773px] w-full md:w-[600px] overflow-hidden rounded-[40px]" data-aos="fade-left">
+                <!-- <img src="images/famesport.png" alt="dame au sport" class="relative" class="h-[713px] w-[520px]">
+                <img src="images/iconstat.png" alt="icon sous forme de stat" class="absolute right-45 top-145"> -->
+                <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
+                    <source src="/images/demo.mp4" type="video/mp4">
+                </video>
             </div>
+
         </section>
 
-        <div class="bg-[#E4FFEB] w-full sm:w-[1245px] flex items-center justify-center gap-[20px] sm:gap-[49px] sm:mx-auto mb-[65px] rounded-lg sm:p-4 p-2">
+        <div class="bg-[#E4FFEB] mx-1 w-full sm:w-[1245px] flex items-center justify-center gap-[20px] sm:gap-[49px] sm:mx-auto mb-[65px] rounded-lg sm:p-4 p-2">
             <img src="images/noteicon.png" alt="calendrier" class="w-5 h-5">
             <p class="font-serif font-normal text-xs sm:text-xl">RevUp, c’est une réponse locale à un besoin universel : se sentir bien dans son corps, à sa manière.
                 Pas de promesse magique. Juste un vrai soutien, avec des outils concrets, pensés pour toi.
@@ -116,7 +145,7 @@
         </div>
 
         <!-- section des chiffres -->
-         <div class="bg-[url(/images/chifrect.png)] h-[517px] flex flex-col sm:flex-row items-center justify-center gap-[59px] sm:gap-[109px]" data-aos="fade-up">
+         <div class="bg-[url(/images/chifrect.png)] h-[400px] flex flex-col sm:flex-row items-center justify-center gap-[59px] sm:gap-[109px]" data-aos="fade-up">
             <p class="flex flex-col items-start justify-center font-serif font-bold text-2xl sm:text-[60px]" data-aos="fade-down">
                 <span class="">Nos</span>
                 <span class="text-[#E30613]"> 
@@ -127,18 +156,18 @@
 
             <div class="flex items-center justify-center gap-[20px] sm:gap-[56px]" data-aos="fade-up">
                 <div class="w-[100px] sm:w-[237px] h-[100px] sm:h-[200px] flex flex-col items-center justify-center sm:gap-1 bg-white rounded-lg">
-                    <span class="text-[#E30613] flex font-mono font-semibold items-center justify-center gap-1 text-base sm:text-[29px]"> <span class="sm:text-[43px] text-2xl">00</span> +</span>
-                    <p class="font-normal font-mono text-base hidden sm:block sm:text-xl">Téléchargement</p>
+                    <span class="text-[#E30613] flex font-mono font-semibold items-center justify-center gap-1 text-base sm:text-[29px]"> <span class="sm:text-[43px] text-2xl">1000</span> +</span>
+                    <p class="font-normal font-mono text-base hidden sm:block sm:text-xl">Fondateurs</p>
                 </div>
 
                 <div class="w-[100px] sm:w-[237px] h-[100px] sm:h-[200px] flex flex-col items-center justify-center sm:gap-1 bg-white rounded-lg">
-                  <span class="text-[#E30613] flex font-mono font-semibold items-center justify-center gap-1 text-base sm:text-[29px]"> <span class="sm:text-[43px] text-2xl">00</span> +</span>
-                  <p class="font-normal font-mono text-base hidden sm:block sm:text-xl">Téléchargement</p>
+                  <span class="text-[#E30613] flex font-mono font-semibold items-center justify-center gap-1 text-base sm:text-[29px]"> <span class="sm:text-[43px] text-2xl">10000</span> +</span>
+                  <p class="font-normal font-mono text-base hidden sm:block sm:text-xl">places limitées</p>
                 </div>
 
                 <div class="w-[100px] sm:w-[237px] h-[100px] sm:h-[200px] flex flex-col items-center justify-center sm:gap-1 bg-white rounded-lg">
-                  <span class="text-[#E30613] flex font-mono font-semibold items-center justify-center gap-1 text-base sm:text-[29px]"> <span class="sm:text-[43px] text-2xl">00</span> +</span>
-                  <p class="font-normal font-mono text-base hidden sm:block sm:text-xl">Téléchargement</p>
+                  <span class="text-[#E30613] flex font-mono font-semibold items-center justify-center gap-1 text-base sm:text-[29px]"> <span class="sm:text-[43px] text-2xl">05</span> +</span>
+                  <p class="font-normal font-mono text-base hidden sm:block sm:text-xl">partenaires</p>
               </div>
             </div>
          </div>
@@ -146,105 +175,108 @@
 
          <!-- deux grandes secttions ici -->
         <div class="bg-[#000000]" data-aos="fade-up">
-            <section class="bg-[#F5F5F5] bg-[url(images/revuplogobg.png)] rounded-b-[90px] flex sm:flex-row flex-col items-center mx-auto w-full justify-center px-4 pt-[110px] sm:pt-[162px] pb-[127px] gap-[110px] sm:gap-[164px] z-10">
-             <div class="flex flex-col gap-4">
-               <img src="images/Mockup.png" alt="mockup de l'app" class="">
-               <div class="flex items-center justify-center gap-2">
-                 <img src="images/playstore.png" alt="playstore image" class="sm:w-[235px] w-[150px]">
-                 <img src="images/appstore.png" alt="app store image" class="sm:w-[235px] w-[150px]">
-               </div>
-             </div>
- 
-             <div class="flex flex-col justify-start items-start gap-[36px]">
-               <div class="flex flex-col sm:gap-1">
-                 <p class="font-seif font-bold text-[30px] sm:text-[40px] sm:leading-6">Devenez Fondateur</p>
-                 <p class="font-mono font-semibold text-white text-[12px] w-[243px] leading-6 bg-[#E30613]">Accès privilégié et avantages exclusifs !</p>
-               </div>
-               <p class="font-serif font-normal text-base text-[#2C2C2D] sm:leading-6">The US Overseas Cooperative Development Council is an alliance of </p>
-               <ul class="style-none flex flex-col gap-[12px] sm:gap-[16px]">
-                 <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                   <img src="images/list.jpg" alt="check icon">
-                   Accès anticipé à l'application
-                 </li>
-                 
-                 <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                   <img src="images/list.jpg" alt="check icon">
-                   Entrée dans le groupe privé des fondateurs (WhatsApp VIP)
-                 </li>
- 
-                 <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                   <img src="images/list.jpg" alt="check icon">
-                   Badge fondateur sur l’appli
-                 </li>
- 
-                 <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                   <img src="images/list.jpg" alt="check icon">
-                   Réductions à vie sur les options premium
-                 </li>
- 
-                 <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                   <img src="images/list.jpg" alt="check icon">
-                   Cadeaux exclusifs à la sortie
-                 </li>
-               </ul>
- 
-               <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[287px] h-[70px] rounded-full cursor-pointer">
-                 <p class="font-mono font-bold text-base text-white">Devenez Fondateur</p>
-                 <img src="images/ei_arrow-right.png" alt="">
-               </button>
-             </div>
-            </section>
-           
-           <footer class="z-5 flex flex-col gap-[50px] sm:gap-[83px] items-center justify-center pt-[100px] pb-8 px-4">
-             <div class="flex sm:flex-row flex-col justify-center gap-[30px] sm:gap-[130px]">
-                 <div class="">
-                   <img src="images/revupfooter.png" alt="logo revup">
-                   <p class="font-mono font-medium text-base leading-6 text-white w-[330px]">Vous n’êtes pas là par hasard. Vous êtes de ceux qui osent croire, construire, et faire bouger les choses. En devenant fondateur , vous n’intégrez pas une app. Vous marquez l’histoire.Merci d’être là, au début de tout.</p>
-                 </div>
- 
-                 <div class="flex sm:flex-row flex-col gap-[45px] sm:gap-[97px]">
-                   <div class="flex flex-col gap-[16px] sm:gap-[38px]">
-                     <h2 class="text-[white] font-mono font-bold text-[20px]">Navigation</h2>
-                     <ul class="style-none flex flex-col gap-[17px]">
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">A propos</li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">
-                        <a href="/contact.html">FAQ</a>
-                       </li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Contact</li>
-                     </ul>
-                   </div>
- 
-                   <div class="flex flex-col gap-[16px] sm:gap-[38px]">
-                     <h2 class="text-[white] font-mono font-bold text-[20px]">Liens utiles</h2>
-                     <ul class="style-none flex flex-col gap-[17px]">
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Fonctionnalités</li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Actualités</li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Espace Media</li>
-                       <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Autre ...</li>
-                     </ul>
-                   </div>
- 
-                   <div class="flex flex-col gap-[30px]">
-                     <h2 class="text-[white] font-mono font-bold text-[20px]">Téléchargez l’application</h2>
-                     <p class="text-[#FFFFFFB2] font-mono font-medium text-sm w-[320px] leading-6 hover:text-[#34C759]">Obtenez gratuitement l’application sur votre mobile et profitez-en.</p>
-                     <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer">
-                       <p class="font-mono font-bold text-base">Télécharger</p>
-                       <img src="images/icondown.png" alt="download icon" class="">
-                     </button>
-                   </div>
-                 </div>
-             </div>
- 
-             <div class="flex sm:flex-row flex-col flex-col-reverse gap-[20px] sm:gap-[109px] items-center justify-center">
-               <p class="font-mono font-normal text-[12px] sm:text-base sm:leading-6 text-[#A19999] hover:text-[#34C759]">© 2025 Revup Apk. Tous les droits sont réservés</p>
-               <div class="flex gap-4">
-                <img src="images/youtube.png" alt="twitter icon">
-                <a href="https://www.facebook.com/share/1CAFtF5dCh/"><img src="images/face.png" alt="facebook icon"></a>           
-                <a href="https://www.instagram.com/revup_africa?igsh=MWhlYzJiMWd5bzhlMA=="><img src="images/insta.png" alt="instagram icon"></a>      
-                <img src="images/linkedin.png" alt="linkedin icon">
+            <section class="bg-[#F5F5F5] bg-[url('/images/revuplogobg.png')] rounded-b-[90px] flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-center px-4 pt-[90px] sm:pt-[162px] pb-[100px] gap-[80px] lg:gap-[164px] lg:mx-auto z-10 overflow-hidden" data-aos="fade-up">
+              <div class="flex flex-col gap-4 items-center" data-aos="fade-right">
+                <img src="images/Mockup.png" alt="mockup de l'app" class="w-full max-w-[320px] sm:max-w-[400px]">
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                  <img src="images/playstore.png" alt="playstore image" class="w-[150px] sm:w-[180px] md:w-[235px]">
+                  <img src="images/appstore.png" alt="app store image" class="w-[150px] sm:w-[180px] md:w-[235px]">
+                </div>
               </div>
-               <p class="font-mono font-normal text-base leading-6 text-[#A19999] hover:text-[#34C759]">Condition générales</p>
-             </div>
+
+              <div class="flex flex-col justify-start items-start gap-[36px] w-full max-w-full md:max-w-[700px]" data-aos="fade-left">
+                <div class="flex flex-col gap-1 text-left lg:text-center">
+                  <p class="font-serif font-bold text-[24px] sm:text-[32px] md:text-[40px] leading-snug text-[#2C2C2D]">Devenez Fondateur</p>
+                  <p class="font-mono font-semibold text-white text-[12px] leading-6 bg-[#E30613] px-3 py-1 w-full max-w-[90%] sm:max-w-[270px] md:max-w-[350px] lg:max-w-[100%] mx-0 lg:mx-auto text-left lg:text-center">
+                    Accès privilégié et avantages exclusifs !
+                  </p>
+                </div>
+
+                <p class="font-serif font-normal text-sm sm:text-base text-[#2C2C2D] leading-6 text-left max-w-full lg:max-w-[600px] break-words">
+                  Faites partie des premiers à bâtir l'histoire de Revup. En tant que fondateur, vous aurez un rôle clé, des privilèges uniques et des surprises réservées à ceux qui osent croire avant tout le monde.
+                </p>
+
+                <ul class="flex flex-col gap-3 sm:gap-4 text-left lg:text-center">
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Accès anticipé à l'application
+                  </li>
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Groupe privé des fondateurs (WhatsApp VIP)
+                  </li>
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Badge fondateur sur l’appli
+                  </li>
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Réductions à vie sur les options premium
+                  </li>
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Cadeaux exclusifs à la sortie
+                  </li>
+                </ul>
+
+                <button class="flex gap-2 items-center justify-center bg-[#34C759] w-full max-w-[287px] h-[60px] rounded-full cursor-pointer mx-0">
+                  <p class="font-mono font-bold text-sm sm:text-base text-white">Devenez Fondateur</p>
+                  <img src="images/ei_arrow-right.png" alt="">
+                </button>
+              </div>
+          </section>
+           
+           <footer class="z-5 flex flex-col gap-8 items-start justify-start md:justify-center md:items-center pt-[80px] px-2 pb-8 overflow-x-hidden" data-aos="fade-up">
+            <div class="flex flex-col xl:flex-row flex-wrap justify-start items-start gap-12 lg:gap-[160px]" data-aos="fade-up">
+              <!-- Logo + Text -->
+              <div data-aos="fade-right" class="max-w-[330px]">
+                <img src="images/revupfooter.png" alt="logo revup" class="mb-4">
+                <p class="font-mono font-medium text-xs md:text-base leading-6 text-white w-full">
+                  Vous n’êtes pas là par hasard. Vous êtes de ceux qui osent croire, construire, et faire bouger les choses. En devenant fondateur, vous n’intégrez pas une app. Vous marquez l’histoire. Merci d’être là, au début de tout.
+                </p>
+              </div>
+
+              <!-- Navigation & Liens utiles & App -->
+              <div class="flex flex-col md:flex-row flex-wrap gap-10 md:gap-[90px]" data-aos="fade-left">
+                <!-- Navigation -->
+                <div class="flex flex-col gap-4 sm:gap-8">
+                  <h2 class="text-white font-mono font-bold text-sm md:text-base">Navigation</h2>
+                  <ul class="flex flex-col gap-3">
+                    <li><a href="/about.html" class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">A propos</a></li>
+                    <li><a href="/contact.html" class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">FAQ</a></li>
+                    <li><a href="/contact.html" class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Contact</a></li>
+                  </ul>
+                </div>
+
+                <!-- Liens utiles -->
+                <div class="flex flex-col gap-4 sm:gap-8">
+                  <h2 class="text-white font-mono font-bold text-sm md:text-base">Liens utiles</h2>
+                  <ul class="flex flex-col gap-3">
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Fonctionnalités</li>
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Actualités</li>
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Espace Media</li>
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Autre ...</li>
+                  </ul>
+                </div>
+
+                <!-- Application -->
+                <div class="flex flex-col gap-6">
+                  <h2 class="text-white font-mono font-bold text-sm md:text-base">Téléchargez l’application</h2>
+                  <p class="text-[#FFFFFFB2] font-mono font-medium text-xs leading-6 break-words">Obtenez gratuitement l’application <br /> sur votre mobile et profitez-en.</p>
+                  <button class="flex gap-2 items-center justify-center bg-[#34C759] w-full max-w-[214px] h-[62px] rounded-full border border-black cursor-pointer">
+                    <p class="font-mono font-bold text-sm">Télécharger</p>
+                    <img src="images/icondown.png" alt="download icon">
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Footer base -->
+            <div class="flex flex-col md:flex-row md:justify-between items-start justify-start gap-4 mt-12 text-center sm:text-left">
+              <p class="font-mono font-normal text-xs sm:text-sm text-[#A19999] hover:text-[#34C759]">© 2025 Revup Apk. Tous les droits sont réservés</p>
+              <div class="flex gap-4">
+                <img src="images/youtube.png" alt="youtube icon" class="w-6 h-6">
+                <a href="https://www.facebook.com/share/1CAFtF5dCh/"><img src="images/face.png" alt="facebook icon" class="w-6 h-6"></a>
+                <a href="https://www.instagram.com/revup_africa?igsh=MWhlYzJiMWd5bzhlMA=="><img src="images/insta.png" alt="instagram icon" class="w-6 h-6"></a>
+                <img src="images/linkedin.png" alt="linkedin icon" class="w-6 h-6">
+              </div>
+              <p class="font-mono font-normal text-xs sm:text-sm text-[#A19999] hover:text-[#34C759]">Conditions générales</p>
+            </div>
            </footer>
         </div>
     </main>

@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap">
@@ -14,7 +15,6 @@
         font-family: 'Work Sans', sans-serif;
       }
     </style>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RevUp App</title>
   </head>
   <body>
@@ -52,8 +52,7 @@
         </button>
       </div>
     </header> -->
-    <header class="w-full">
-      <!-- Bandeau haut -->
+    <header class="overflow-hidden">
       <div class="h-14 bg-[#E30613] flex justify-center items-center" data-aos="fade-down">
         <div class="flex items-center gap-2">
           <i class="fa-solid fa-phone text-white"></i>
@@ -61,13 +60,11 @@
         </div>
       </div>
 
-      <!-- Nav principale -->
       <div class="py-4 flex flex-wrap items-center justify-between px-4 sm:px-8 max-w-7xl mx-auto">
-        <a href="#home" class="shrink-0" data-aos="fade-right">
+        <a href="/" class="shrink-0" data-aos="fade-right">
           <img src="images/revuplogo.jpg" alt="logo revup" class="h-10" />
         </a>
 
-        <!-- Burger menu for mobile -->
         <button class="sm:hidden block" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
           <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" stroke-width="2"
             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -75,7 +72,6 @@
           </svg>
         </button>
 
-        <!-- Menu Desktop -->
         <nav class="hidden sm:flex flex-1 justify-center">
           <ul class="flex flex-wrap items-center gap-4 text-sm sm:text-lg">
             <li><a href="#" class="hover:text-[#E30613]">Fonctionnalités</a></li>
@@ -86,221 +82,123 @@
           </ul>
         </nav>
 
-        <!-- CTA Button -->
         <button class="hidden sm:flex items-center gap-2 bg-[#34C759] text-black font-bold text-sm px-6 py-3 rounded-full border border-black">
           <span>Télécharger</span>
           <img src="images/icondown.png" alt="icon download" class="h-5" />
         </button>
       </div>
 
-      <!-- Menu Mobile -->
       <div id="mobileMenu" class="sm:hidden hidden px-4">
         <ul class="flex flex-col gap-4 py-2">
-          <li><a href="#">Fonctionnalités</a></li>
-          <li><a href="#">Comment ça marche</a></li>
-          <li><a href="/about.html">À propos</a></li>
-          <li><a href="#">Actualités</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li>
+            <a href="#" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Fonctionnalités
+            </a>
+          </li>
+          <li>
+            <a href="#" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Comment ça marche
+            </a>
+          </li>
+          <li>
+            <a href="/about.html" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              À propos
+            </a>
+          </li>
+          <li>
+            <a href="#" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Actualités
+            </a>
+          </li>
+          <li>
+            <a href="/contact.html" class="px-4 py-2 rounded-md transition duration-200 hover:bg-[#E6FFE6] hover:text-[#34C759] active:bg-[#ccf5cc]">
+              Contact
+            </a>
+          </li>
         </ul>
+
       </div>
     </header>
     
-    <main class="z-10" id="app">
-        <div class="bg-[#F2791814]">
-          <section class="bg-[#34C759] sm:h-[758px] rounded-b-[60px] px-4 sm:px-12 py-12 flex flex-col sm:flex-row items-center justify-center sm:gap-2">
-            <div class="relative bg-transparent hidden sm:block sm:flex-1" data-aos="fade-left">
-              <img src="images/handsome-black-man-is-engaged-gym 1.png" alt="image hero section" class="z-0">
+    <main class="z-10 overflow-hidden" id="app">
+       <div class="bg-[#F2791814] w-full">
+          <section class="bg-[#34C759] h-[758px] rounded-b-[60px] md:py-8 py-4 px-4 md:px-12 md:py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 lg:gap-4 md:gap-12 overflow-hidden">
+  
+            <!-- Partie Vidéo -->
+            <div class="rounded-[60px] hidden md:block h-full w-full overflow-hidden relative" data-aos="fade-left">
+              <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover">
+                <source src="/images/demo.mp4" type="video/mp4">
+                Ton navigateur ne supporte pas la vidéo HTML5.
+              </video>
             </div>
-            <div class="py-12 sm:pt-[93px] sm:pl-[80px] sm:flex-1 w-full">
-              <div class="relative" data-aos="fade-right">
-                <img src="images/top.png" alt="absolute top image" class="absolute -left-11 -top-8 z-0">
-                <img src="images/heroecrit.png" alt="hero text" class="relative">
+
+            <!-- Partie Texte -->
+            <div class="w-full max-w-2xl mx-auto text-center md:text-left">
+              <div class="relative" data-aos="fade-right" data-aos="fade-right">
+                <img src="images/top.png" alt="absolute top image" class="absolute -top-8 -left-7 md:-left-11 md:-top-8 z-0">
+                <img src="images/heroecrit.png" alt="hero text" class="relative ml-1 mt-2 md:mx-0">
               </div>
-              <p class="font-mono font-normal text-xl sm:text-2xl leading-8 sm:leading-9 tracking-wide my-6" data-aos="fade-left">
+              <p class="font-mono font-normal text-xl sm:text-2xl leading-8 sm:leading-9 tracking-wide my-6 text-left">
                 L'application <span class="font-bold">africaine</span> qui transforme chaque entraînement en récompense. Rejoignez le mouvement en cliquant sur le bouton ci-dessous.
               </p>
-              <button class="bg-white border border-black font-mono font-medium w-full max-w-[235px] h-[60px] sm:h-[70px] text-[#009626] text-lg rounded-full mt-4 cursor-pointer" data-aos="fade-up">
+              <button class="bg-white border border-black font-mono font-medium w-full max-w-[235px] h-[60px] sm:h-[70px] text-[#009626] text-lg rounded-full mt-4 cursor-pointer mx-auto md:mx-0" data-aos="fade-down">
                 Je suis intérêssé.e
               </button>
             </div>
+
           </section>
-  
-          <!-- <section class="pt-[154px] w-full">
-            <div class="flex flex-col justify-center items-center mx-auto sm:gap-4 gap-6">
-              <p class="text-center font-mono font-extrabold sm:text-6xl text-4xl flex flex-col mb-8 sm:mb-4" data-aos="fade-up">
+
+
+          <!-- SECTION POURQUOI REVUP -->
+          <section class="py-20 sm:pt-[154px] w-full px-4 max-w-7xl lg:mx-auto">
+            <div class="flex flex-col justify-center items-center mg:mx-auto gap-6 sm:gap-4">
+              <p class="text-center font-mono font-extrabold text-4xl sm:text-6xl mb-8 sm:mb-4" data-aos="fade-up">
                 <span>Pourquoi</span>
-                <span><span class="text-[#E30613]">Revup </span> ?</span>
+                <span><span class="text-[#E30613]">Revup</span> ?</span>
               </p>
-              <p class="font-mono font-normal text-base sm:text-base text-center tracking-wide sm:leading-6 w-full sm:w-[709px] px-2 leading-8 sm:leading-9 sm:tracking-wide" data-aos="fade-up">
-                Parce qu’il est temps que l’Afrique ait sa propre plateforme de sport et de bien-être. RevUp, c’est plus qu’une application : c’est un mouvement. Un espace où l’on bouge, où l’on se dépasse, où chaque effort est valorisé. Ici, on allie le sport, la nutrition, l’humeur et la communauté pour créer une nouvelle génération de champions africains dans le corps, dans l’esprit, dans la tête.
+              <p class="font-mono font-normal text-base sm:text-base text-center tracking-wide leading-8 sm:leading-9 w-full max-w-2xl px-2" data-aos="fade-up">
+                Parce qu’il est temps que l’Afrique ait sa propre plateforme de sport et de bien-être. RevUp, c’est plus qu’une application : c’est un mouvement. Un espace où l’on bouge, où l’on se dépasse, où chaque effort est valorisé.
               </p>
             </div>
-  
-            <div class="my-[200px] flex sm:flex-row flex-col items-center justify-center sm:gap-[30px] gap-[80px]" data-aos="fade-up">
-  
+
+            <!-- CARTES -->
+            <div class="my-20 sm:my-[200px] flex flex-col sm:flex-row flex-wrap items-center justify-center gap-20 sm:gap-[30px] px-4">
+              <!-- Carte 1 -->
               <div class="relative">
-                 <div class="flex items-center justify-center absolute -top-18 left-17 sm:left-24 z-10" data-aos="fade-right">
-                    <img src="images/bagicon.png" alt="">
-                 </div>
-                <div class="bg-white sm:h-[417px] h-[280px] w-[310px] sm:w-[380px] rounded-[32px] flex flex-col gap-[20px] sm:gap-[36px] items-center justify-center sm:pt-[160px] pt-[120px] px-4 relative">
-                  <p class="font-bold font-serif text-xl sm:text-4xl text-center w-[220px]">Motivation garantie</p>
-                  <p class="font-serif sm:text-2xl text-xl font-light text-center">Recevez des points après chaque séance.</p>
+                <div class="flex items-center justify-center absolute -top-10 left-1/2 -translate-x-1/2 z-10" data-aos="fade-right">
+                  <img src="images/bagicon.png" alt="">
+                </div>
+                <div class="bg-white h-[280px] sm:h-[417px] w-full max-w-[310px] sm:max-w-[380px] rounded-[32px] flex flex-col items-center justify-center gap-5 sm:gap-9 pt-[120px] sm:pt-[160px] px-4 text-center">
+                  <p class="font-bold font-serif text-xl sm:text-4xl">Motivation garantie</p>
+                  <p class="font-serif text-xl sm:text-2xl font-light">Recevez des points après chaque séance.</p>
                 </div>
               </div>
-  
+
+              <!-- Carte 2 -->
               <div class="relative">
-                 <div class="flex items-center justify-center absolute -top-18 left-17 sm:left-24 z-10" data-aos="fade-up">
-                    <img src="images/recomp.png" alt="image ou icone recompense">
-                 </div>
-
-                <div class="bg-white sm:h-[417px] h-[280px] w-[310px] sm:w-[380px] rounded-[32px] flex flex-col gap-[20px] sm:gap-[36px] items-center justify-center sm:pt-[160px] pt-[120px] px-4 relative">
-                  <p class="font-bold font-serif text-xl sm:text-4xl text-center">Récompenses réelles</p>
-                  <p class="font-serif sm:text-2xl text-xl font-light text-center">Convertissez vos efforts en cadeaux ou argent.</p>
+                <div class="flex items-center justify-center absolute -top-10 left-1/2 -translate-x-1/2 z-10" data-aos="fade-up">
+                  <img src="images/recomp.png" alt="image ou icone recompense">
+                </div>
+                <div class="bg-white h-[280px] sm:h-[417px] w-full max-w-[310px] sm:max-w-[380px] rounded-[32px] flex flex-col items-center justify-center gap-5 sm:gap-9 pt-[120px] sm:pt-[160px] px-4 text-center">
+                  <p class="font-bold font-serif text-xl sm:text-4xl">Récompenses réelles</p>
+                  <p class="font-serif text-xl sm:text-2xl font-light">Convertissez vos efforts en cadeaux ou argent.</p>
                 </div>
               </div>
-  
+
+              <!-- Carte 3 -->
               <div class="relative">
-                 <div class="flex items-center justify-center absolute -top-18 left-17 sm:left-24 z-10" data-aos="fade-left">
-                    <img src="images/objectif.png" alt="recompense icon">
-                 </div>
-
-                <div class="bg-white sm:h-[417px] h-[280px] w-[310px] sm:w-[380px] rounded-[32px] flex flex-col gap-[20px] sm:gap-[36px] items-center justify-center sm:pt-[160px] pt-[120px] px-4 relative">
-                  <p class="font-bold font-serif text-xl sm:text-4xl text-center">100% africain</p>
-                  <p class="font-serif sm:text-2xl text-xl font-light text-center">Une application conçue par des passionnés du continent, pour le continent</p>
+                <div class="flex items-center justify-center absolute -top-10 left-1/2 -translate-x-1/2 z-10" data-aos="fade-left">
+                  <img src="images/objectif.png" alt="recompense icon">
+                </div>
+                <div class="bg-white h-[280px] sm:h-[417px] w-full max-w-[310px] sm:max-w-[380px] rounded-[32px] flex flex-col items-center justify-center gap-5 sm:gap-9 pt-[120px] sm:pt-[160px] px-4 text-center">
+                  <p class="font-bold font-serif text-xl sm:text-4xl">100% africain</p>
+                  <p class="font-serif text-xl sm:text-2xl font-light">Une application conçue par des passionnés du continent, pour le continent</p>
                 </div>
               </div>
-
-            </div> -->
-  
-            <!-- <div class="w-full bg-[url('/images/rectanglebg.jpg')] bg-cover bg-no-repeat sm:h-[970px] h-[1070px] mb-10 sm:py-[97px] py-[40px]" data-aos="fade-up">
-                <p class="flex flex-col items-center mx-auto sm:gap-2 sm:gap-10 sm:mb-[45px] mb-[10px]" data-aos="fade-up">
-                  <span class="font-serif font-bold text-[35px] sm:text-[65px] sm:tracking-wide sm:leading-6 text-center">Comment ça marche</span> 
-                  <span class="font-serif font-bold text-[35px] sm:text-[65px] sm:tracking-wide sm:leading-6 text-center"><span class="text-[#E30613]">Revup</span> ? </span>
-                </p> 
-            
-                <div class="py-1 sm:py-8 px-4 sm:px-[107px]">
-                    <div class="flex flex-col sm:grid sm:grid-cols-[auto_1fr] gap-x-2" data-aos="fade-up">
-                 
-                      <div class="flex sm:flex-col flex-row items-start sm:items-center" data-aos="fade-right">
-                        <div class="w-8 h-8 rounded-full border-2 border-[#1DC176] text-black bg-white flex items-center justify-center font-bold">1</div>
-                        <div class="sm:block hidden w-[2px] flex-1 bg-[#1DC176] mx-auto mt-1"></div>
-                      </div>
-                      <div class="mt-2 sm:mt-0 mb-[20px] sm:mb-[70px]" data-aos="fade-left">
-                        <h3 class="font-mono font-bold text-base">Tu t’inscris gratuitement.</h3>
-                        <p class="font-mono font-normal text-sm text-[#2F3631] mt-1">
-                          Après avoir téléchargé notre application, procédez à la création de votre compte.
-                        </p>
-                      </div>
-
-                     
-                      <div class="flex sm:flex-col flex-row items-start sm:items-center" data-aos="fade-right">
-                        <div class="w-8 h-8 rounded-full border-2 border-[#1DC176] text-black bg-white flex items-center justify-center font-bold">2</div>
-                        <div class="sm:block hidden w-[2px] flex-1 bg-[#1DC176] mx-auto mt-1"></div>
-                      </div>
-                      <div class="mt-2 sm:mt-0 mb-[20px] sm:mb-[70px]" data-aos="fade-left">
-                        <h3 class="font-mono font-bold text-base">Tu bouges (marche, sport, activité physique).</h3>
-                        <p class="font-mono font-normal text-sm text-[#2F3631] mt-1">
-                          Présentez votre business ou projet, et nous vous proposons des solutions adaptées.
-                        </p>
-                      </div>
-
-                      
-                      <div class="flex sm:flex-col flex-row items-start sm:items-center" data-aos="fade-right">
-                        <div class="w-8 h-8 rounded-full border-2 border-[#1DC176] text-black bg-white flex items-center justify-center font-bold">3</div>
-                        <div class="sm:block hidden w-[2px] flex-1 bg-[#1DC176] mx-auto mt-1"></div>
-                      </div>
-                      <div class="mt-2 sm:mt-0 mb-[20px] sm:mb-[70px]" data-aos="fade-left">
-                        <h3 class="font-mono font-bold text-base">Tu gagnes des diamants après chaque effort.</h3>
-                        <p class="font-mono font-normal text-sm text-[#2F3631] mt-1">
-                          Choisissez des activités quotidiennes pour renforcer vos compétences.
-                        </p>
-                      </div>
-
-                      
-                      <div class="flex sm:flex-col flex-row items-start sm:items-center" data-aos="fade-right">
-                        <div class="w-8 h-8 rounded-full border-2 border-[#1DC176] text-black bg-white flex items-center justify-center font-bold">4</div>
-                        <div class="sm:block hidden w-[2px] flex-1 bg-[#1DC176] mx-auto mt-1"></div>
-                      </div>
-                      <div class="mt-2 sm:mt-0 mb-[20px] sm:mb-[70px]" data-aos="fade-left">
-                        <h3 class="font-mono font-bold text-base">Tu suis ton mood, ta nutrition, ton évolution.</h3>
-                        <p class="font-mono font-normal text-sm text-[#2F3631] mt-1">
-                          Gagnez des récompenses à échanger dans notre boutique.
-                        </p>
-                      </div>
-
-                      
-                      <div class="flex sm:flex-col flex-row items-start sm:items-center" data-aos="fade-right">
-                        <div class="w-8 h-8 rounded-full border-2 border-[#1DC176] text-black bg-white flex items-center justify-center font-bold">5</div>
-                        <div class="sm:block hidden w-[2px] flex-1 bg-[#1DC176] mx-auto mt-1"></div>
-                      </div>
-                      <div class="mt-2 sm:mt-0 mb-[20px] sm:mb-[70px]" data-aos="fade-left">
-                        <h3 class="font-mono font-bold text-base">Tu échanges tes diamants contre des récompenses.</h3>
-                        <p class="font-mono font-normal text-sm text-[#2F3631] mt-1">
-                          Nos mentors vous guident selon votre formule choisie.
-                        </p>
-                      </div>
-
-                      <div class="flex sm:flex-col flex-row items-start sm:items-center" data-aos="fade-right">
-                        <div class="w-8 h-8 rounded-full border-2 border-[#1DC176] text-black bg-white flex items-center justify-center font-bold">6</div>
-                      </div>
-                      <div class="mt-2 sm:mt-0 mb-[20px] sm:mb-[70px]" data-aos="fade-left">
-                        <h3 class="font-mono font-bold text-base">Tu avances avec toute la communauté RevUp à tes côtés.</h3>
-                        <p class="font-mono font-normal text-sm text-[#2F3631] mt-1">
-                          Rejoignez d'autres membres pour échanger, partager et progresser ensemble.
-                        </p>
-                      </div>
-                    </div>
-                </div>
-
-            </div> -->
-             <!-- POURQUOI REVUP -->
-            <section class="py-20 sm:pt-[154px] w-full px-4">
-              <div class="flex flex-col justify-center items-center mx-auto gap-6 sm:gap-4">
-                <p class="text-center font-mono font-extrabold text-4xl sm:text-6xl mb-8 sm:mb-4" data-aos="fade-up">
-                  <span>Pourquoi</span>
-                  <span><span class="text-[#E30613]">Revup</span> ?</span>
-                </p>
-                <p class="font-mono font-normal text-base sm:text-base text-center tracking-wide leading-8 sm:leading-9 w-full sm:w-[709px] px-2" data-aos="fade-up">
-                  Parce qu’il est temps que l’Afrique ait sa propre plateforme de sport et de bien-être. RevUp, c’est plus qu’une application : c’est un mouvement. Un espace où l’on bouge, où l’on se dépasse, où chaque effort est valorisé.
-                </p>
-              </div>
-
-              <!-- CARTES MOTIVATION -->
-              <div class="my-20 sm:my-[200px] flex flex-col sm:flex-row items-center justify-center gap-20 sm:gap-[30px] px-4" data-aos="fade-up">
-                <!-- CARTE 1 -->
-                <div class="relative">
-                  <div class="flex items-center justify-center absolute -top-10 left-1/2 -translate-x-1/2 z-10" data-aos="fade-right">
-                    <img src="images/bagicon.png" alt="">
-                  </div>
-                  <div class="bg-white h-[280px] sm:h-[417px] w-full max-w-[310px] sm:max-w-[380px] rounded-[32px] flex flex-col items-center justify-center gap-5 sm:gap-9 pt-[120px] sm:pt-[160px] px-4">
-                    <p class="font-bold font-serif text-xl sm:text-4xl text-center">Motivation garantie</p>
-                    <p class="font-serif text-xl sm:text-2xl font-light text-center">Recevez des points après chaque séance.</p>
-                  </div>
-                </div>
-                <!-- CARTE 2 -->
-                <div class="relative">
-                  <div class="flex items-center justify-center absolute -top-10 left-1/2 -translate-x-1/2 z-10" data-aos="fade-up">
-                    <img src="images/recomp.png" alt="image ou icone recompense">
-                  </div>
-                  <div class="bg-white h-[280px] sm:h-[417px] w-full max-w-[310px] sm:max-w-[380px] rounded-[32px] flex flex-col items-center justify-center gap-5 sm:gap-9 pt-[120px] sm:pt-[160px] px-4">
-                    <p class="font-bold font-serif text-xl sm:text-4xl text-center">Récompenses réelles</p>
-                    <p class="font-serif text-xl sm:text-2xl font-light text-center">Convertissez vos efforts en cadeaux ou argent.</p>
-                  </div>
-                </div>
-                <!-- CARTE 3 -->
-                <div class="relative">
-                  <div class="flex items-center justify-center absolute -top-10 left-1/2 -translate-x-1/2 z-10" data-aos="fade-left">
-                    <img src="images/objectif.png" alt="recompense icon">
-                  </div>
-                  <div class="bg-white h-[280px] sm:h-[417px] w-full max-w-[310px] sm:max-w-[380px] rounded-[32px] flex flex-col items-center justify-center gap-5 sm:gap-9 pt-[120px] sm:pt-[160px] px-4">
-                    <p class="font-bold font-serif text-xl sm:text-4xl text-center">100% africain</p>
-                    <p class="font-serif text-xl sm:text-2xl font-light text-center">Une application conçue par des passionnés du continent, pour le continent</p>
-                  </div>
-                </div>
-              </div>
+            </div>
           </section>
-        </div>
 
+        </div>
 
         <!-- <section class="py-[142px] flex flex-col items-center justify-center gap-[68px]" data-aos="fade-up">
           <p class="flex flex-col text-center items-center sm:gap-8" data-aos="fade-up">
@@ -344,51 +242,45 @@ Votre avis construit Revup.</p>
           </div>>
         </section> -->
 
-        <section class="py-20 flex flex-col items-center justify-center gap-16 px-4 sm:px-8 md:px-16" data-aos="fade-up">
-          <p class="flex flex-col text-center items-center gap-6 sm:gap-8" data-aos="fade-up">
-            <span class="font-serif font-bold text-3xl sm:text-5xl md:text-6xl tracking-tight leading-tight sm:leading-snug">
+        <section class="py-20 px-4 sm:px-8 md:px-16 flex flex-col items-center gap-16" data-aos="fade-up">
+          <div class="flex flex-col text-center items-center gap-4 sm:gap-6" data-aos="fade-up">
+            <h2 class="font-serif font-bold text-3xl sm:text-5xl md:text-6xl leading-tight tracking-tight">
               Restez informés aux
-            </span>
-            <span class="font-serif font-bold text-3xl sm:text-5xl md:text-6xl tracking-tight leading-tight sm:leading-snug text-[#E30613]">
-              <span>nouvelles</span>
-            </span>
-          </p>
+            </h2>
+            <h2 class="font-serif font-bold text-3xl sm:text-5xl md:text-6xl leading-tight tracking-tight text-[#E30613]">
+              nouvelles
+            </h2>
+          </div>
 
-          <div class="flex flex-col sm:flex-row items-center justify-center w-full max-w-7xl mx-auto gap-8 sm:gap-10" data-aos="fade-up">
-
-            <div data-aos="fade-right">
-              <div class="bg-white h-[380px] w-full max-w-xs sm:max-w-[381px] border border-[#00000033] rounded-md overflow-hidden shadow-sm">
-                <div class="bg-[url('/images/image3.jpeg')] bg-cover bg-center h-48 sm:h-56"></div>
-                <div class="py-4 sm:py-6 px-4 flex flex-col items-start justify-center gap-2 sm:gap-3">
-                  <p class="font-serif font-bold text-base sm:text-sm">Des nouveautés en approche</p>
-                  <p class="font-sans font-normal text-xs sm:text-sm text-[#373737]">
-                    L’expérience Revup ne fait que commencer ! Des mini-jeux, de nouveaux défis, et encore plus de façons de gagner arrivent très bientôt. Restez connectés !
-                  </p>
-                </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 w-full max-w-7xl lg:mx-auto" data-aos="fade-up">
+            
+            <div class="bg-white border border-[#00000033] rounded-md shadow-sm overflow-hidden h-full max-w-sm w-full mx-auto" data-aos="fade-right">
+              <div class="bg-[url('/images/image3.jpeg')] bg-cover bg-center h-48 sm:h-56"></div>
+              <div class="p-4 sm:p-6 flex flex-col gap-3">
+                <p class="font-serif font-bold text-base sm:text-lg">Des nouveautés en approche</p>
+                <p class="font-sans text-sm text-[#373737] leading-relaxed">
+                  L’expérience Revup ne fait que commencer ! Des mini-jeux, de nouveaux défis, et encore plus de façons de gagner arrivent très bientôt. Restez connectés !
+                </p>
               </div>
             </div>
 
-            <div data-aos="fade-left">
-              <div class="bg-white h-[380px] w-full max-w-xs sm:max-w-[381px] border border-[#00000033] rounded-md overflow-hidden shadow-sm">
-                <div class="bg-[url('/images/image2.jpeg')] bg-cover bg-center h-48 sm:h-56"></div>
-                <div class="py-4 sm:py-6 px-4 flex flex-col items-start justify-center gap-2 sm:gap-3">
-                  <p class="font-serif font-bold text-base sm:text-sm">Des partenaires exclusifs</p>
-                  <p class="font-sans font-normal text-xs sm:text-sm text-[#373737]">
-                    Revup s’agrandit avec des marques locales et africaines pour vous offrir des récompenses toujours plus proches de vous. Bientôt dans votre ville !
-                  </p>
-                </div>
+            <div class="bg-white border border-[#00000033] rounded-md shadow-sm overflow-hidden h-full max-w-sm w-full mx-auto" data-aos="fade-left">
+              <div class="bg-[url('/images/image2.jpeg')] bg-cover bg-center h-48 sm:h-56"></div>
+              <div class="p-4 sm:p-6 flex flex-col gap-3">
+                <p class="font-serif font-bold text-base sm:text-lg">Des partenaires exclusifs</p>
+                <p class="font-sans text-sm text-[#373737] leading-relaxed">
+                  Revup s’agrandit avec des marques locales et africaines pour vous offrir des récompenses toujours plus proches de vous. Bientôt dans votre ville !
+                </p>
               </div>
             </div>
 
-            <div data-aos="fade-right">
-              <div class="bg-white h-[380px] w-full max-w-xs sm:max-w-[381px] border border-[#00000033] rounded-md overflow-hidden shadow-sm">
-                <div class="bg-[url('/images/image1.jpeg')] bg-cover bg-center h-48 sm:h-56"></div>
-                <div class="py-4 sm:py-6 px-4 flex flex-col items-start justify-center gap-2 sm:gap-3">
-                  <p class="font-serif font-bold text-base sm:text-sm">Fonctionnalités en test</p>
-                  <p class="font-sans font-normal text-xs sm:text-sm text-[#373737]">
-                    Notre équipe bosse sur des options pour personnaliser vos objectifs, suivre vos progrès et débloquer des surprises. Vous testez, vous influencez. Votre avis construit Revup.
-                  </p>
-                </div>
+            <div class="bg-white border border-[#00000033] rounded-md shadow-sm overflow-hidden h-full max-w-sm w-full mx-auto" data-aos="fade-right">
+              <div class="bg-[url('/images/image1.jpeg')] bg-cover bg-center h-48 sm:h-56"></div>
+              <div class="p-4 sm:p-6 flex flex-col gap-3">
+                <p class="font-serif font-bold text-base sm:text-lg">Fonctionnalités en test</p>
+                <p class="font-sans text-sm text-[#373737] leading-relaxed">
+                  Notre équipe bosse sur des options pour personnaliser vos objectifs, suivre vos progrès et débloquer des surprises. Vous testez, vous influencez. Votre avis construit Revup.
+                </p>
               </div>
             </div>
 
@@ -396,105 +288,111 @@ Votre avis construit Revup.</p>
         </section>
 
 
+
         <div class="bg-[#000000]" data-aos="fade-up">
-          <section class="bg-[#F5F5F5] bg-[url('/images/revuplogobg.png')] rounded-b-[90px] flex sm:flex-row flex-col items-center mx-auto w-full justify-center px-4 pt-[110px] sm:pt-[162px] pb-[127px] gap-[110px] sm:gap-[164px] z-10" data-aos="fade-up">
-            <div class="flex flex-col gap-4" data-aos="fade-right">
-              <img src="images/Mockup.png" alt="mockup de l'app" class="">
-              <div class="flex items-center justify-center gap-2">
-                <img src="images/playstore.png" alt="playstore image" class="sm:w-[235px] w-[150px]">
-                <img src="images/appstore.png" alt="app store image" class="sm:w-[235px] w-[150px]">
+          <section class="bg-[#F5F5F5] bg-[url('/images/revuplogobg.png')] rounded-b-[90px] flex flex-col lg:flex-row items-start lg:items-center justify-start lg:justify-center px-4 pt-[90px] sm:pt-[162px] pb-[100px] gap-[80px] lg:gap-[164px] lg:mx-auto z-10 overflow-hidden" data-aos="fade-up">
+              <div class="flex flex-col gap-4 items-center" data-aos="fade-right">
+                <img src="images/Mockup.png" alt="mockup de l'app" class="w-full max-w-[320px] sm:max-w-[400px]">
+                <div class="flex flex-wrap items-center justify-center gap-4">
+                  <img src="images/playstore.png" alt="playstore image" class="w-[150px] sm:w-[180px] md:w-[235px]">
+                  <img src="images/appstore.png" alt="app store image" class="w-[150px] sm:w-[180px] md:w-[235px]">
+                </div>
               </div>
-            </div>
 
-            <div class="flex flex-col justify-start items-start gap-[36px]" data-aos="fade-left">
-              <div class="flex flex-col sm:gap-1">
-                <p class="font-seif font-bold text-[30px] sm:text-[40px] sm:leading-6">Devenez Fondateur</p>
-                <p class="font-mono font-semibold text-white text-[12px] w-[243px] leading-6 bg-[#E30613]">Accès privilégié et avantages exclusifs !</p>
+              <div class="flex flex-col justify-start items-start gap-[36px] w-full max-w-full md:max-w-[700px]" data-aos="fade-left">
+                <div class="flex flex-col gap-1 text-left lg:text-center">
+                  <p class="font-serif font-bold text-[24px] sm:text-[32px] md:text-[40px] leading-snug text-[#2C2C2D]">Devenez Fondateur</p>
+                  <p class="font-mono font-semibold text-white text-[12px] leading-6 bg-[#E30613] px-3 py-1 w-full max-w-[90%] sm:max-w-[270px] md:max-w-[350px] lg:max-w-[100%] mx-0 lg:mx-auto text-left lg:text-center">
+                    Accès privilégié et avantages exclusifs !
+                  </p>
+                </div>
+
+                <p class="font-serif font-normal text-sm sm:text-base text-[#2C2C2D] leading-6 text-left max-w-full lg:max-w-[600px] break-words">
+                  Faites partie des premiers à bâtir l'histoire de Revup. En tant que fondateur, vous aurez un rôle clé, des privilèges uniques et des surprises réservées à ceux qui osent croire avant tout le monde.
+                </p>
+
+                <ul class="flex flex-col gap-3 sm:gap-4 text-left lg:text-center">
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Accès anticipé à l'application
+                  </li>
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Groupe privé des fondateurs (WhatsApp VIP)
+                  </li>
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Badge fondateur sur l’appli
+                  </li>
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Réductions à vie sur les options premium
+                  </li>
+                  <li class="flex items-center gap-2 text-sm sm:text-base leading-6 font-serif font-normal">
+                    <img src="images/list.jpg" alt="check icon" class="w-5 h-5"> Cadeaux exclusifs à la sortie
+                  </li>
+                </ul>
+
+                <button class="flex gap-2 items-center justify-center bg-[#34C759] w-full max-w-[287px] h-[60px] rounded-full cursor-pointer mx-0">
+                  <p class="font-mono font-bold text-sm sm:text-base text-white">Devenez Fondateur</p>
+                  <img src="images/ei_arrow-right.png" alt="">
+                </button>
               </div>
-              <p class="font-serif font-normal text-base text-[#2C2C2D] sm:leading-6 max-w-[600px]">Faites partie des premiers à bâtir l'histoire de Revup. En tant que fondateur, vous aurez un rôle clé, des privilèges uniques et des surprises réservées à ceux qui osent croire avant tout le monde. </p>
-              <ul class="style-none flex flex-col gap-[12px] sm:gap-[16px]">
-                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                  <img src="images/list.jpg" alt="check icon">
-                  Accès anticipé à l'application
-                </li>
-                
-                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                  <img src="images/list.jpg" alt="check icon">
-                  Entrée dans le groupe privé des fondateurs (WhatsApp VIP)
-                </li>
-
-                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                  <img src="images/list.jpg" alt="check icon">
-                  Badge fondateur sur l’appli
-                </li>
-
-                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                  <img src="images/list.jpg" alt="check icon">
-                  Réductions à vie sur les options premium
-                </li>
-
-                <li class="flex items-center gap-2 text-base leading-6 font-serif font-normal">
-                  <img src="images/list.jpg" alt="check icon">
-                  Cadeaux exclusifs à la sortie
-                </li>
-              </ul>
-
-              <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[287px] h-[70px] rounded-full cursor-pointer">
-                <p class="font-mono font-bold text-base text-white">Devenez Fondateur</p>
-                <img src="images/ei_arrow-right.png" alt="">
-              </button>
-            </div>
           </section>
+
+
           
-          <footer class="z-5 flex flex-col gap-[50px] sm:gap-[83px] items-center justify-center pt-[100px] pb-8 px-4" data-aos="fade-up">
-            <div class="flex sm:flex-row flex-col justify-center gap-[30px] sm:gap-[130px]" data-aos="fade-up">
-                <div class="" data-aos="fade-right">
-                  <img src="images/revupfooter.png" alt="logo revup">
-                  <p class="font-mono font-medium text-base leading-6 text-white w-[330px]">Vous n’êtes pas là par hasard. Vous êtes de ceux qui osent croire, construire, et faire bouger les choses. En devenant fondateur , vous n’intégrez pas une app. Vous marquez l’histoire.Merci d’être là, au début de tout.</p>
+          <footer class="z-5 flex flex-col gap-8 items-start justify-start md:justify-center md:items-center pt-[80px] px-2 pb-8 overflow-x-hidden" data-aos="fade-up">
+            <div class="flex flex-col xl:flex-row flex-wrap justify-start items-start gap-12 lg:gap-[160px]" data-aos="fade-up">
+              <!-- Logo + Text -->
+              <div data-aos="fade-right" class="max-w-[330px]">
+                <img src="images/revupfooter.png" alt="logo revup" class="mb-4">
+                <p class="font-mono font-medium text-xs md:text-base leading-6 text-white w-full">
+                  Vous n’êtes pas là par hasard. Vous êtes de ceux qui osent croire, construire, et faire bouger les choses. En devenant fondateur, vous n’intégrez pas une app. Vous marquez l’histoire. Merci d’être là, au début de tout.
+                </p>
+              </div>
+
+              <!-- Navigation & Liens utiles & App -->
+              <div class="flex flex-col md:flex-row flex-wrap gap-10 md:gap-[90px]" data-aos="fade-left">
+                <!-- Navigation -->
+                <div class="flex flex-col gap-4 sm:gap-8">
+                  <h2 class="text-white font-mono font-bold text-sm md:text-base">Navigation</h2>
+                  <ul class="flex flex-col gap-3">
+                    <li><a href="/about.html" class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">A propos</a></li>
+                    <li><a href="/contact.html" class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">FAQ</a></li>
+                    <li><a href="/contact.html" class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Contact</a></li>
+                  </ul>
                 </div>
 
-                <div class="flex sm:flex-row flex-col gap-[45px] sm:gap-[97px]" data-aos="fade-left">
-                  <div class="flex flex-col gap-[16px] sm:gap-[38px]">
-                    <h2 class="text-[white] font-mono font-bold text-[20px]">Navigation</h2>
-                    <ul class="style-none flex flex-col gap-[17px]">
-                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">A propos</li>
-                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">
-                        <a href="/contact.html">FAQ</a>
-                       </li>
-                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Contact</li>
-                    </ul>
-                  </div>
-
-                  <div class="flex flex-col gap-[16px] sm:gap-[38px]">
-                    <h2 class="text-[white] font-mono font-bold text-[20px]">Liens utiles</h2>
-                    <ul class="style-none flex flex-col gap-[17px]">
-                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Fonctionnalités</li>
-                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Actualités</li>
-                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Espace Media</li>
-                      <li class="font-mono font-semibold text-[14px] text-[#FFFFFFB2] hover:text-[#34C759]">Autre ...</li>
-                    </ul>
-                  </div>
-
-                  <div class="flex flex-col gap-[30px]">
-                    <h2 class="text-[white] font-mono font-bold text-[20px]">Téléchargez l’application</h2>
-                    <p class="text-[#FFFFFFB2] font-mono font-medium text-sm w-[320px] leading-6">Obtenez gratuitement l’application sur votre mobile et profitez-en.</p>
-                    <button class="flex gap-2 items-center justify-center bg-[#34C759] w-[214px] h-[62px] rounded-full border border-black cursor-pointer">
-                      <p class="font-mono font-bold text-base">Télécharger</p>
-                      <img src="images/icondown.png" alt="download icon" class="">
-                    </button>
-                  </div>
+                <!-- Liens utiles -->
+                <div class="flex flex-col gap-4 sm:gap-8">
+                  <h2 class="text-white font-mono font-bold text-sm md:text-base">Liens utiles</h2>
+                  <ul class="flex flex-col gap-3">
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Fonctionnalités</li>
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Actualités</li>
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Espace Media</li>
+                    <li class="font-mono font-semibold text-xs sm:text-sm text-[#FFFFFFB2] hover:text-[#34C759]">Autre ...</li>
+                  </ul>
                 </div>
+
+                <!-- Application -->
+                <div class="flex flex-col gap-6">
+                  <h2 class="text-white font-mono font-bold text-sm md:text-base">Téléchargez l’application</h2>
+                  <p class="text-[#FFFFFFB2] font-mono font-medium text-xs leading-6 break-words">Obtenez gratuitement l’application <br /> sur votre mobile et profitez-en.</p>
+                  <button class="flex gap-2 items-center justify-center bg-[#34C759] w-full max-w-[214px] h-[62px] rounded-full border border-black cursor-pointer">
+                    <p class="font-mono font-bold text-sm">Télécharger</p>
+                    <img src="images/icondown.png" alt="download icon">
+                  </button>
+                </div>
+              </div>
             </div>
 
-            <div class="flex sm:flex-row flex-col flex-col-reverse gap-[20px] sm:gap-[109px] items-center justify-center">
-              <p class="font-mono font-normal text-[12px] sm:text-base sm:leading-6 text-[#A19999] hover:text-[#34C759]">© 2025 Revup Apk. Tous les droits sont réservés</p>
+            <!-- Footer base -->
+            <div class="flex flex-col md:flex-row md:justify-between items-start justify-start gap-4 mt-12 text-center sm:text-left">
+              <p class="font-mono font-normal text-xs sm:text-sm text-[#A19999] hover:text-[#34C759]">© 2025 Revup Apk. Tous les droits sont réservés</p>
               <div class="flex gap-4">
-                <img src="images/youtube.png" alt="twitter icon">
-                <a href="https://www.facebook.com/share/1CAFtF5dCh/"><img src="images/face.png" alt="facebook icon"></a>           
-                <a href="https://www.instagram.com/revup_africa?igsh=MWhlYzJiMWd5bzhlMA=="><img src="images/insta.png" alt="instagram icon"></a>      
-                <img src="images/linkedin.png" alt="linkedin icon">
+                <img src="images/youtube.png" alt="youtube icon" class="w-6 h-6">
+                <a href="https://www.facebook.com/share/1CAFtF5dCh/"><img src="images/face.png" alt="facebook icon" class="w-6 h-6"></a>
+                <a href="https://www.instagram.com/revup_africa?igsh=MWhlYzJiMWd5bzhlMA=="><img src="images/insta.png" alt="instagram icon" class="w-6 h-6"></a>
+                <img src="images/linkedin.png" alt="linkedin icon" class="w-6 h-6">
               </div>
-              <p class="font-mono font-normal text-base leading-6 text-[#A19999] hover:text-[#34C759]">Condition générales</p>
+              <p class="font-mono font-normal text-xs sm:text-sm text-[#A19999] hover:text-[#34C759]">Conditions générales</p>
             </div>
           </footer>
         </div>
